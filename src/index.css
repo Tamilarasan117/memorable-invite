@@ -4,11 +4,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 @layer utilities {
-  .font-signature {
+  .font-primary {
     font-family: 'Great Vibes', cursive;
   }
 
-  .font-elegant {
+  .font-secondary {
     font-family: 'Playfair Display', serif;
   }
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(8px) rotate(-5deg); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes float4 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(3deg); }
+}
+
+@layer utilities {
+  .animate-float1 {
+    animation: float1 6s ease-in-out infinite;
+  }
+  .animate-float2 {
+    animation: float2 5s ease-in-out infinite;
+  }
+  .animate-float3 {
+    animation: float3 7s ease-in-out infinite;
+  }
+  .animate-float4 {
+    animation: float4 4s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* tailwind.config.ts or global.css */
+@keyframes pulse-gold {
+  0%, 100% { text-shadow: 0 0 8px #facc15; }
+  50% { text-shadow: 0 0 16px #facc15; }
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 2s infinite;
+}
+
+.drop-shadow-gold-glow {
+  filter: drop-shadow(0 0 4px #facc15);
 }

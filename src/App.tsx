@@ -11,9 +11,9 @@ import MusicPlayer from "./components/MusicPlayer"
 
 const App = () => {
   return (
-    <div className="bg-black text-gold font-fancy min-h-screen w-full overflow-x-hidden">
+    <div className="bg-black text-gold font-fancy w-full overflow-x-hidden">
       <MusicPlayer />
-      <main className="w-full max-w-[430px] mx-auto px-4 py-4">
+      <main className="w-full max-w-[430px] mx-auto">
         <WelcomeSection />
         <CoupleIntro />
         <ImageCarousel />
