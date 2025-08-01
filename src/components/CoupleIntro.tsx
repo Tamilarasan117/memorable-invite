@@ -119,8 +119,8 @@ const CoupleIntro = () => {
         <div className="absolute bottom-3 right-5">
           <CoupleInfo
             name="V.S. Sarah"
-            designation="(PG Assistant, G.H.S.S, Kannirajapuram.)"
-            parents="D/o. Mr. G.V. Vijayakumar & J.S.R. Jegatha."
+            designation="PG Assistant, G.H.S.S"
+            parents="D/o. Mr. G. Vijayakumar & J. Jegatha."
             address="(Heavenly Garden, Therivillai, Mulagumoodu P.O.)"
             index={1}
             align="right"
@@ -137,7 +137,7 @@ const CoupleIntro = () => {
           <CoupleInfo
             name="John Michael"
             designation="(Software Engineer, ABC Corp)"
-            parents="S/o. Mr. Paul Michael & Mrs. Grace"
+            parents="S/o. Mr. Michael & Mrs. Grace"
             address="(St. Joseph Street, Nagercoil, Tamil Nadu)"
             index={2}
             align="left"
