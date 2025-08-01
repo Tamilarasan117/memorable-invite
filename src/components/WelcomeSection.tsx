@@ -126,7 +126,7 @@ const WelcomeSection = () => {
           <span className="italic text-[10px]">Reception to follow</span>
         </motion.p>
       </div>
-      <CountdownTimer />
+      <CountdownTimer startDelay={2} />
     </section>
   );
 };

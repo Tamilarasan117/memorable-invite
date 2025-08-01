@@ -1,72 +1,84 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-const CountdownTimer = () => {
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+};
+
+const CountdownTimer = ({ startDelay = 2 }: { startDelay?: number }) => {
   const targetDate = new Date("2025-09-04T18:00:00");
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
+  const [startAnimation, setStartAnimation] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(getTimeRemaining(targetDate));
     }, 1000);
     return () => clearInterval(timer);
-  }, [targetDate]);
+  }, []);
+
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      setStartAnimation(true);
+    }, startDelay * 1000);
+    return () => clearTimeout(delay);
+  }, [startDelay]);
 
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
 
-  if (timeLeft.total <= 0) {
-    return (
-      <section className="relative bg-white/60 backdrop-blur-md py-10 overflow-hidden text-center">
-        <div className="text-pink-700 font-primary text-xl z-10 relative">
-          💖 It's Time to Celebrate! 💖
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section
       ref={ref}
-      className="relative bg-white backdrop-blur-lg py-5 overflow-hidden text-center"
+      className="relative bg-white/40 backdrop-blur-md mt-3 py-6 px-4 rounded-xl max-w-md mx-auto"
     >
       <img
-        src="/assets/butterfly.png"
+        src="/assets/Heart.png"
         alt="Butterfly"
-        className="absolute top-[8%] left-[6%] w-10 animate-float1 z-10"
+        className="absolute top-[10%] left-[15%] w-3 animate-float1 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/Heart.png"
         alt="Butterfly"
-        className="absolute top-[15%] right-[7%] w-7 animate-float2 z-10"
-      />
-      <img
-        src="/assets/butterfly.png"
-        alt="Butterfly"
-        className="absolute bottom-[18%] left-[10%] w-10 animate-float3 z-10"
-      />
-      <img
-        src="/assets/butterfly.png"
-        alt="Butterfly"
-        className="absolute bottom-[8%] right-[12%] w-15 animate-float4 z-10"
+        className="absolute top-[30%] right-[8%] w-4 animate-float2 z-10"
       />
 
       <motion.div
-        className="relative z-10 max-w-full mx-auto px-4"
-        initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative z-10 text-center"
+        initial="hidden"
+        animate={startAnimation && inView ? "visible" : "hidden"}
+        variants={containerVariants}
       >
-        <h2 className="text-2xl font-bold font-primary text-pink-800 mb-4 tracking-wide">
-          Countdown to Our Special Day
-        </h2>
+        <motion.p
+          className="text-sm text-gray-700 font-secondary mb-3 tracking-wide"
+          variants={itemVariants}
+        >
+          We're getting married in
+        </motion.p>
 
-        <div className="flex justify-center gap-3 flex-wrap">
+        <motion.div
+          className="flex justify-center gap-4 sm:gap-6 flex-wrap"
+          variants={containerVariants}
+        >
           <TimeBox label="Days" value={timeLeft.days} />
-          <TimeBox label="Hours" value={timeLeft.hours} />
-          <TimeBox label="Minutes" value={timeLeft.minutes} />
-          <TimeBox label="Seconds" value={timeLeft.seconds} />
-        </div>
+          <TimeBox label="Hrs" value={timeLeft.hours} />
+          <TimeBox label="Mins" value={timeLeft.minutes} />
+          <TimeBox label="Secs" value={timeLeft.seconds} />
+        </motion.div>
       </motion.div>
     </section>
   );
@@ -74,22 +86,21 @@ const CountdownTimer = () => {
 
 const TimeBox = ({ label, value }: { label: string; value: number }) => (
   <motion.div
-    className="bg-white/20 backdrop-blur-xl rounded-2xl px-4 py-3 ring-inset ring-1 ring-white/20 flex flex-col items-center justify-center"
+    className="bg-white/30 backdrop-blur-lg rounded-2xl px-4 py-3 ring-1 ring-white/30 flex flex-col items-center justify-center"
     style={{
       width: "80px",
       height: "80px",
-      boxShadow:
-        "inset 0 0 10px rgba(255,255,255,0.1), inset 0 0 10px rgba(0,0,0,0.1.5)",
+      boxShadow: `
+        inset 4px 4px 8px rgba(0, 0, 0, 0.15), 
+        inset -4px -4px 8px rgba(255, 255, 255, 0.6)
+      `,
     }}
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.6 }}
+    variants={itemVariants}
   >
-    <div className="text-[28px] sm:text-3xl font-bold font-primary text-yellow-600 drop-shadow-gold-glow animate-pulse-gold leading-tight">
+    <div className="text-[28px] font-bold font-primary text-yellow-600 animate-pulse-gold leading-none">
       {String(value).padStart(2, "0")}
     </div>
-    <div className="text-[12px] font-secondary text-gray-700 tracking-wide mt-1">
+    <div className="text-xs font-secondary text-gray-700 tracking-wide mt-1">
       {label}
     </div>
   </motion.div>

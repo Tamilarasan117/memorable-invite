@@ -24,20 +24,19 @@ const ImageCarousel = () => {
     };
   }, [current]);
 
-  const sectionRef = useRef(null);
-  const inView = useInView(sectionRef, { once: true });
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   return (
-    <section ref={sectionRef} className="bg-white py-12 overflow-hidden relative">
-      {/* Butterfly Effects */}
+    <section ref={ref} className="bg-white py-12 overflow-hidden relative">
       <img
         src="/assets/butterfly.png"
         className="absolute top-[16%] left-[6%] w-4 animate-float1 z-10"
         alt="Butterfly"
       />
       <img
-        src="/assets/butterfly.png"
-        className="absolute bottom-[12%] right-[8%] w-6 animate-float2 z-10"
+        src="/assets/Heart.png"
+        className="absolute bottom-[12%] right-[8%] w-2 animate-float2 z-10"
         alt="Butterfly"
       />
       <img
@@ -49,7 +48,7 @@ const ImageCarousel = () => {
       <motion.div
         className="max-w-sm mx-auto px-4 relative z-20"
         initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <h2 className="text-2xl font-bold font-primary text-pink-800 text-center mb-6">
@@ -74,7 +73,6 @@ const ImageCarousel = () => {
           </AnimatePresence>
         </div>
 
-        {/* Indicator Dots */}
         <div className="flex justify-center gap-2 mt-4">
           {images.map((_, index) => (
             <div
