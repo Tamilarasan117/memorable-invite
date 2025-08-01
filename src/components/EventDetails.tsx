@@ -128,9 +128,9 @@ const EventDetails = () => {
           );
         })}
 
-        <div className="flex flex-col justify-center items-center gap-10 mt-15">
+        <div className="flex flex-row justify-center items-center gap-6 mt-15 flex-nowrap">
           <motion.div
-            className="flex flex-col items-center"
+            className="flex flex-col items-center min-w-[110px]"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -145,7 +145,7 @@ const EventDetails = () => {
           </motion.div>
 
           <motion.div
-            className="flex flex-col items-center"
+            className="flex flex-col items-center min-w-[110px]"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
