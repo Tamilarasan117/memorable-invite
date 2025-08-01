@@ -128,7 +128,7 @@ const EventDetails = () => {
           );
         })}
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-10 mt-16">
+        <div className="flex flex-col justify-center items-center gap-10 mt-15">
           <motion.div
             className="flex flex-col items-center"
             initial={{ opacity: 0, y: 40 }}
