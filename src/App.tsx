@@ -2,7 +2,6 @@ import WelcomeSection from "./components/WelcomeSection"
 import CoupleIntro from "./components/CoupleIntro"
 import ImageCarousel from "./components/ImageCarousel"
 import EventDetails from "./components/EventDetails"
-// import CountdownTimer from "./components/CountdownTimer"
 import FamilyIntro from "./components/FamilyIntro"
 import Blessings from "./components/Blessings"
 import RSVP from "./components/RSVP"
@@ -15,7 +14,6 @@ const App = () => {
       <MusicPlayer />
       <main className="w-full max-w-[430px] mx-auto">
         <WelcomeSection />
-        {/* <CountdownTimer /> */}
         <CoupleIntro />
         <ImageCarousel />
         <EventDetails />

@@ -1,10 +1,85 @@
+import { motion } from "framer-motion";
 
 const RSVP = () => {
   return (
-    <div className='bg-black flex items-center justify-center p-5'>
-      <h1 className='text-white text-2xl font-bold'>WelcomeSection</h1>
-    </div>
-  )
-}
+    <section className="relative bg-white py-16 px-6 overflow-hidden text-center">
+      <img
+        src="/assets/Heart.png"
+        alt="Heart"
+        className="absolute top-[10%] left-[8%] w-3 animate-float1 z-10"
+      />
+      <img
+        src="/assets/Heart.png"
+        alt="Heart"
+        className="absolute bottom-[12%] right-[6%] w-4 animate-float2 z-10"
+      />
+      <img
+        src="/assets/butterfly.png"
+        alt="Butterfly"
+        className="absolute top-[10%] left-[15%] w-7 animate-float1 z-10"
+      />
+      <img
+        src="/assets/butterfly.png"
+        alt="Butterfly"
+        className="absolute top-[30%] right-[8%] w-10 animate-float2 z-10"
+      />
+      <img
+        src="/assets/butterfly.png"
+        alt="Butterfly"
+        className="absolute bottom-[30%] left-[10%] w-15 animate-float3 z-10"
+      />
+      <img
+        src="/assets/butterfly.png"
+        alt="Butterfly"
+        className="absolute bottom-[5%] right-[15%] w-20 animate-float4 z-10"
+      />
 
-export default RSVP
+      <motion.div
+        className="relative z-20 max-w-xl mx-auto"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-3xl font-bold text-pink-800 font-primary mb-4">
+          Join the Celebration
+        </h2>
+
+        <p className="text-gray-700 font-secondary text-sm sm:text-base mb-8">
+          Your presence will make our special day even more memorable. Kindly
+          let us know if you’ll be joining us!
+        </p>
+
+        <div className="flex flex-col sm:flex-row justify-center gap-3">
+          <motion.a
+            href="tel:+916379680880"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-pink-600 text-white px-5 py-2 rounded-full font-medium shadow-lg hover:bg-pink-700 transition flex items-center justify-center gap-2"
+          >
+            <img src="/assets/call.png" alt="Call" className="w-7 h-7" />
+            Call Us
+          </motion.a>
+
+          <motion.a
+            href="https://wa.me/916379680880?text=Hi%2C%20we'd%20love%20to%20join%20your%20wedding!"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-green-500 text-white px-5 py-2 rounded-full font-medium shadow-lg hover:bg-green-600 transition flex items-center justify-center gap-2"
+          >
+            <img
+              src="/assets/whatsapp.png"
+              alt="WhatsApp"
+              className="w-7 h-7 rounded"
+            />
+            Message on WhatsApp
+          </motion.a>
+        </div>
+      </motion.div>
+    </section>
+  );
+};
+
+export default RSVP;
