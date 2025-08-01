@@ -34,7 +34,6 @@ const CoupleIntro = () => {
       />
 
       <div className="relative z-10 max-w-md mx-auto">
-        {/* Section Heading */}
         <motion.h2
           className="text-3xl font-bold font-primary text-pink-800 mb-10"
           variants={fadeUp}
@@ -46,9 +45,7 @@ const CoupleIntro = () => {
           Meet the Couple
         </motion.h2>
 
-        {/* Bride + Ring + Groom */}
         <div className="flex items-center justify-center gap-4">
-          {/* Bride Card */}
           <motion.div
             className="bg-gradient-to-br from-pink-50 to-pink-100 border border-pink-200 shadow-xl rounded-2xl p-5 w-[150px] relative"
             variants={fadeUp}
@@ -70,14 +67,13 @@ const CoupleIntro = () => {
               className="w-24 h-24 rounded-full mx-auto mb-2 object-cover border-4 border-white shadow-md"
             />
             <h3 className="text-lg font-bold font-primary text-pink-900">
-              Aarthi
+              Karthik
             </h3>
             <p className="text-xs font-secondary text-gray-600">
               M.A. Literature
             </p>
           </motion.div>
 
-          {/* Ring */}
           <motion.img
             src="/assets/ring.png"
             alt="Wedding Ring"
@@ -89,7 +85,6 @@ const CoupleIntro = () => {
             custom={2}
           />
 
-          {/* Groom Card */}
           <motion.div
             className="bg-gradient-to-bl from-pink-50 to-pink-100 border border-pink-200 shadow-xl rounded-2xl p-5 w-[150px] relative"
             variants={fadeUp}
@@ -111,7 +106,7 @@ const CoupleIntro = () => {
               className="w-24 h-24 rounded-full mx-auto mb-2 object-cover border-4 border-white shadow-md"
             />
             <h3 className="text-lg font-bold font-primary text-pink-900">
-              Karthik
+              Aarthi
             </h3>
             <p className="text-xs font-secondary text-gray-600">
               B.E. Computer Science
@@ -119,7 +114,6 @@ const CoupleIntro = () => {
           </motion.div>
         </div>
 
-        {/* Romantic Quote */}
         <motion.blockquote
           className="mt-10 px-4 italic text-sm text-gray-700 font-secondary"
           variants={fadeUp}

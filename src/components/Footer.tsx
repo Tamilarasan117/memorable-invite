@@ -14,7 +14,7 @@ const Footer = () => {
         </p>
       </div>
 
-       <img
+      <img
         src="/assets/butterfly.png"
         alt="Butterfly"
         className="absolute top-[10%] left-[5%] w-7 animate-float1 z-10"

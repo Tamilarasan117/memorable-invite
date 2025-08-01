@@ -28,9 +28,8 @@ const CountdownTimer = () => {
   return (
     <section
       ref={ref}
-      className="relative bg-white backdrop-blur-lg py-16 overflow-hidden text-center"
+      className="relative bg-white backdrop-blur-lg py-5 overflow-hidden text-center"
     >
-      {/* Butterflies */}
       <img
         src="/assets/butterfly.png"
         alt="Butterfly"
@@ -58,7 +57,7 @@ const CountdownTimer = () => {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <h2 className="text-2xl font-bold font-primary text-pink-800 mb-6 tracking-wide">
+        <h2 className="text-2xl font-bold font-primary text-pink-800 mb-4 tracking-wide">
           Countdown to Our Special Day
         </h2>
 
@@ -80,7 +79,7 @@ const TimeBox = ({ label, value }: { label: string; value: number }) => (
       width: "80px",
       height: "80px",
       boxShadow:
-        "inset 0 0 10px rgba(255,255,255,0.1), inset 0 0 10px rgba(0,0,0,0.2)",
+        "inset 0 0 10px rgba(255,255,255,0.1), inset 0 0 10px rgba(0,0,0,0.1.5)",
     }}
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}

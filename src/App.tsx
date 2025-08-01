@@ -15,10 +15,10 @@ const App = () => {
       <MusicPlayer />
       <main className="w-full max-w-[430px] mx-auto">
         <WelcomeSection />
+        {/* <CountdownTimer /> */}
         <CoupleIntro />
         <ImageCarousel />
         <EventDetails />
-        <CountdownTimer />
         <FamilyIntro />
         <Blessings />
         <RSVP />
