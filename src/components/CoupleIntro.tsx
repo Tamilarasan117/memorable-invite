@@ -116,7 +116,7 @@ const CoupleIntro = () => {
         <div className="absolute top-0 left-0">
           <CoupleCard backgroundPosition="left" from="left" />
         </div>
-        <div className="absolute bottom-5 right-5">
+        <div className="absolute bottom-3 right-5">
           <CoupleInfo
             name="V.S. Sarah"
             designation="(PG Assistant, G.H.S.S, Kannirajapuram.)"
@@ -133,7 +133,7 @@ const CoupleIntro = () => {
         <div className="absolute top-0 right-0">
           <CoupleCard backgroundPosition="right" from="right" />
         </div>
-        <div className="absolute bottom-10 left-5">
+        <div className="absolute bottom-5 left-5">
           <CoupleInfo
             name="John Michael"
             designation="(Software Engineer, ABC Corp)"
