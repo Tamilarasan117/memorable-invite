@@ -1,16 +1,17 @@
-import ReactAudioPlayer from "react-h5-audio-player";
-import "react-h5-audio-player/lib/styles.css";
+import type { RefObject } from "react";
 
-const MusicPlayer = () => {
+type MusicPlayerProps = {
+  audioRef: RefObject<HTMLAudioElement | null>;
+};
+
+const MusicPlayer = ({ audioRef }: MusicPlayerProps) => {
   return (
-    <div className="fixed bottom-0 left-0 opacity-0 pointer-events-none">
-      <ReactAudioPlayer
-        src="/audio/Arabian_Night.mp3"
-        autoPlay
-        loop
-        volume={0.5}
-      />
-    </div>
+    <audio
+      ref={audioRef}
+      src="/audio/BG_Music.mp3"
+      loop
+      preload="auto"
+    />
   );
 };
 

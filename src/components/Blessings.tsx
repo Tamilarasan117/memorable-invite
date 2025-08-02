@@ -70,7 +70,7 @@ const Blessings = () => {
     const newMsg = {
       name,
       message: text,
-      avatar: "/assets/avatar_default.png",
+      avatar: "/assets/.png",
     };
 
     setMessages((prev) => [newMsg, ...prev]);
@@ -104,7 +104,7 @@ const Blessings = () => {
       <img
         src="/assets/butterfly.png"
         alt="Butterfly"
-        className="absolute bottom-[30%] left-[10%] w-15 animate-float3 z-10"
+        className="absolute bottom-[30%] left-[10%] w-15 animate-float3 z-0"
       />
       <img
         src="/assets/butterfly.png"
@@ -155,7 +155,7 @@ const Blessings = () => {
             <img
               src={messages[index].avatar}
               alt={messages[index].name}
-              className="w-20 h-20 rounded-full object-cover mb-4 shadow-lg shadow-pink-300"
+              className="w-20 h-20 rounded-full object-cover mb-4 shadow-lg shadow-gray-300"
             />
             <h3 className="text-md font-semibold text-gray-800">
               {messages[index].name}

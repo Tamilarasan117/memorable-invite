@@ -23,33 +23,7 @@ const photoList = [
 
 const FamilyIntro = () => {
   return (
-    <section className="bg-white py-16 px-6 overflow-hidden text-center">
-      <img
-        src="/assets/Heart.png"
-        alt="Heart"
-        className="absolute top-[5%] left-[8%] w-4 animate-float1 z-10"
-      />
-      <img
-        src="/assets/Heart.png"
-        alt="Heart"
-        className="absolute bottom-[10%] right-[5%] w-6 animate-float2 z-10"
-      />
-      <img
-        src="/assets/butterfly.png"
-        alt="Butterfly"
-        className="absolute top-[10%] left-[15%] w-7 animate-float3 z-10"
-      />
-      <img
-        src="/assets/butterfly.png"
-        alt="Butterfly"
-        className="absolute top-[30%] right-[10%] w-10 animate-float4 z-10"
-      />
-      <img
-        src="/assets/butterfly.png"
-        alt="Butterfly"
-        className="absolute bottom-[5%] left-[10%] w-14 animate-float3 z-10"
-      />
-
+    <section className="bg-white py-16 px-6 overflow-hidden text-center relative">
       <motion.div
         className="max-w-2xl mx-auto mb-12"
         initial="hidden"
@@ -76,7 +50,7 @@ const FamilyIntro = () => {
         </motion.p>
       </motion.div>
 
-      <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+      <div className="flex flex-col sm:flex-row justify-center gap-6 mb-3">
         <motion.div
           className="bg-pink-50 border border-pink-200 p-6 rounded-lg shadow-md w-full sm:w-1/2"
           initial={{ opacity: 0, x: -40 }}
@@ -120,49 +94,36 @@ const FamilyIntro = () => {
         </motion.div>
       </div>
 
-      <div className="relative max-w-5xl mx-auto overflow-hidden h-[640px]">
-        <div className="flex gap-4">
+      <div className="space-y-4 overflow-hidden">
+        <div className="overflow-hidden max-w-[100vw]">
           <motion.div
-            className="flex flex-col gap-3 w-1/3"
-            animate={{ y: ["0%", "-50%"] }}
-            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+            className="flex gap-2 w-max px-2"
+            animate={{ x: ["-50%", "0%"] }}
+            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
           >
             {[...photoList, ...photoList].map((src, i) => (
               <img
-                key={`col1-${i}`}
+                key={`row1-${i}`}
                 src={src}
                 alt={`Family ${i}`}
-                className="rounded-lg shadow-md"
+                className="h-40 w-64 object-cover rounded-xl shadow-md border border-gray-100 flex-shrink-0"
               />
             ))}
           </motion.div>
+        </div>
 
+        <div className="overflow-hidden max-w-[100vw]">
           <motion.div
-            className="flex flex-col gap-3 w-1/3"
-            animate={{ y: ["-50%", "0%"] }}
-            transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
+            className="flex gap-2 w-max px-2"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
           >
             {[...photoList, ...photoList].map((src, i) => (
               <img
-                key={`col2-${i}`}
+                key={`row2-${i}`}
                 src={src}
                 alt={`Family ${i}`}
-                className="rounded-lg shadow-md"
-              />
-            ))}
-          </motion.div>
-
-          <motion.div
-            className="flex flex-col gap-3 w-1/3"
-            animate={{ y: ["0%", "-50%"] }}
-            transition={{ duration: 31, repeat: Infinity, ease: "linear" }}
-          >
-            {[...photoList, ...photoList].map((src, i) => (
-              <img
-                key={`col3-${i}`}
-                src={src}
-                alt={`Family ${i}`}
-                className="rounded-lg shadow-md"
+                className="h-40 w-64 object-cover rounded-xl shadow-md border border-gray-100 flex-shrink-0"
               />
             ))}
           </motion.div>

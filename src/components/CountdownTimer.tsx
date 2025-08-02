@@ -20,13 +20,19 @@ const itemVariants = {
 };
 
 const CountdownTimer = ({ startDelay = 2 }: { startDelay?: number }) => {
-  const targetDate = new Date("2025-09-04T18:00:00");
+  const targetDate = new Date("2025-09-04T16:00:00");
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
   const [startAnimation, setStartAnimation] = useState(false);
+  const [isTimeUp, setIsTimeUp] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(getTimeRemaining(targetDate));
+      const updatedTime = getTimeRemaining(targetDate);
+      setTimeLeft(updatedTime);
+      if (updatedTime.total <= 0) {
+        setIsTimeUp(true);
+        clearInterval(timer);
+      }
     }, 1000);
     return () => clearInterval(timer);
   }, []);
@@ -44,16 +50,16 @@ const CountdownTimer = ({ startDelay = 2 }: { startDelay?: number }) => {
   return (
     <section
       ref={ref}
-      className="relative bg-white/40 backdrop-blur-md mt-3 py-6 px-4 rounded-xl max-w-md mx-auto"
+      className="relative bg-white/40 backdrop-blur-md py-6 px-4 rounded-xl max-w-md mx-auto"
     >
       <img
         src="/assets/Heart.png"
-        alt="Butterfly"
+        alt="Heart"
         className="absolute top-[10%] left-[15%] w-3 animate-float1 z-10"
       />
       <img
         src="/assets/Heart.png"
-        alt="Butterfly"
+        alt="Heart"
         className="absolute top-[30%] right-[8%] w-4 animate-float2 z-10"
       />
 
@@ -63,23 +69,40 @@ const CountdownTimer = ({ startDelay = 2 }: { startDelay?: number }) => {
         animate={startAnimation && inView ? "visible" : "hidden"}
         variants={containerVariants}
       >
-        <motion.p
-          className="text-sm text-gray-700 font-secondary mb-3 tracking-wide"
-          variants={itemVariants}
-        >
-          We're getting married in
-        </motion.p>
+        {isTimeUp ? (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <p className="text-xl sm:text-2xl font-bold font-primary text-pink-700 mb-2">
+              💖 Forever Begins Today 💍
+            </p>
+            <p className="text-sm text-gray-600 font-secondary">
+              Our journey as one begins now. Thank you for being part of our
+              story.
+            </p>
+          </motion.div>
+        ) : (
+          <>
+            <motion.p
+              className="text-sm text-gray-700 font-secondary mb-3 tracking-wide"
+              variants={itemVariants}
+            >
+              We're getting married in
+            </motion.p>
 
-       <motion.div
-  className="flex justify-center gap-2 sm:gap-6 flex-nowrap"
-  variants={containerVariants}
->
-  <TimeBox label="Days" value={timeLeft.days} />
-  <TimeBox label="Hrs" value={timeLeft.hours} />
-  <TimeBox label="Mins" value={timeLeft.minutes} />
-  <TimeBox label="Secs" value={timeLeft.seconds} />
-</motion.div>
-
+            <motion.div
+              className="flex justify-center gap-2 sm:gap-6 flex-nowrap"
+              variants={containerVariants}
+            >
+              <TimeBox label="Days" value={timeLeft.days} />
+              <TimeBox label="Hrs" value={timeLeft.hours} />
+              <TimeBox label="Mins" value={timeLeft.minutes} />
+              <TimeBox label="Secs" value={timeLeft.seconds} />
+            </motion.div>
+          </>
+        )}
       </motion.div>
     </section>
   );
@@ -87,25 +110,24 @@ const CountdownTimer = ({ startDelay = 2 }: { startDelay?: number }) => {
 
 const TimeBox = ({ label, value }: { label: string; value: number }) => (
   <motion.div
-  className="bg-white/30 backdrop-blur-lg rounded-2xl px-3 py-3 ring-1 ring-white/30 flex flex-col items-center justify-center"
-  style={{
-    width: "65px",
-    height: "70px",
-    boxShadow: `
-      inset 4px 4px 8px rgba(0, 0, 0, 0.15), 
-      inset -4px -4px 8px rgba(255, 255, 255, 0.6)
-    `,
-  }}
-  variants={itemVariants}
->
-  <div className="text-[24px] sm:text-[28px] font-bold font-primary text-yellow-600 animate-pulse-gold leading-none">
-    {String(value).padStart(2, "0")}
-  </div>
-  <div className="text-[10px] sm:text-xs font-secondary text-gray-700 tracking-wide mt-1">
-    {label}
-  </div>
-</motion.div>
-
+    className="bg-white/30 backdrop-blur-lg rounded-2xl px-3 py-3 ring-1 ring-white/30 flex flex-col items-center justify-center"
+    style={{
+      width: "65px",
+      height: "70px",
+      boxShadow: `
+        inset 4px 4px 8px rgba(0, 0, 0, 0.15), 
+        inset -4px -4px 8px rgba(255, 255, 255, 0.6)
+      `,
+    }}
+    variants={itemVariants}
+  >
+    <div className="text-[24px] sm:text-[28px] font-bold font-primary text-yellow-600 animate-pulse-gold leading-none">
+      {String(value).padStart(2, "0")}
+    </div>
+    <div className="text-[10px] sm:text-xs font-secondary text-gray-700 tracking-wide mt-1">
+      {label}
+    </div>
+  </motion.div>
 );
 
 const getTimeRemaining = (target: Date) => {

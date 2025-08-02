@@ -12,7 +12,6 @@ const textVariants = {
 const RSVP = () => {
   return (
     <section className="relative bg-white py-16 px-6 overflow-hidden text-center">
-      {/* Floating Decorations */}
       <img
         src="/assets/Heart.png"
         alt="Heart"
@@ -55,7 +54,6 @@ const RSVP = () => {
           },
         }}
       >
-        {/* Heading */}
         <motion.h2
           className="text-3xl font-bold text-pink-800 font-primary mb-4"
           variants={textVariants}
@@ -64,7 +62,6 @@ const RSVP = () => {
           Join the Celebration
         </motion.h2>
 
-        {/* Message */}
         <motion.p
           className="text-gray-700 font-secondary text-sm sm:text-base mb-8"
           variants={textVariants}
@@ -74,49 +71,45 @@ const RSVP = () => {
           let us know if you’ll be joining us!
         </motion.p>
 
-        {/* Buttons */}
-<motion.div
-  className="flex flex-col sm:flex-row justify-center gap-3"
-  variants={{
-    visible: { transition: { staggerChildren: 0.2 } },
-  }}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
->
-  {/* Call Button */}
-  <motion.a
-    href="tel:+911234567890"
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    variants={textVariants}
-    custom={2}
-    className="bg-pink-600 text-white px-5 py-2 rounded-full font-medium shadow-lg hover:bg-pink-700 transition flex items-center justify-center gap-2"
-  >
-    <img src="/assets/call.png" alt="Call" className="w-7 h-7" />
-    Call Us
-  </motion.a>
+        <motion.div
+          className="flex flex-col sm:flex-row justify-center gap-3"
+          variants={{
+            visible: { transition: { staggerChildren: 0.2 } },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.a
+            href="tel:+911234567890"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            variants={textVariants}
+            custom={2}
+            className="bg-pink-600 text-white px-5 py-2 rounded-full font-medium shadow-lg hover:bg-pink-700 transition flex items-center justify-center gap-2"
+          >
+            <img src="/assets/call.png" alt="Call" className="w-7 h-7" />
+            Call Us
+          </motion.a>
 
-  {/* WhatsApp Button */}
-  <motion.a
-    href="https://wa.me/911234567890?text=Hi%2C%20we'd%20love%20to%20join%20your%20wedding!"
-    target="_blank"
-    rel="noopener noreferrer"
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    variants={textVariants}
-    custom={2}
-    className="bg-green-500 text-white px-5 py-2 rounded-full font-medium shadow-lg hover:bg-green-600 transition flex items-center justify-center gap-2"
-  >
-    <img
-      src="/assets/whatsapp.png"
-      alt="WhatsApp"
-      className="w-7 h-7 rounded"
-    />
-    Message on WhatsApp
-  </motion.a>
-</motion.div>
-
+          <motion.a
+            href="https://wa.me/911234567890?text=Hi%2C%20we'd%20love%20to%20join%20your%20wedding!"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            variants={textVariants}
+            custom={2}
+            className="bg-green-500 text-white px-5 py-2 rounded-full font-medium shadow-lg hover:bg-green-600 transition flex items-center justify-center gap-2"
+          >
+            <img
+              src="/assets/whatsapp.png"
+              alt="WhatsApp"
+              className="w-7 h-7 rounded"
+            />
+            Message on WhatsApp
+          </motion.a>
+        </motion.div>
       </motion.div>
     </section>
   );

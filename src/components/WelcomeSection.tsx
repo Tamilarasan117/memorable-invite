@@ -1,5 +1,7 @@
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import CountdownTimer from "./CountdownTimer";
+import MusicPlayer from "./MusicPlayer";
 
 const textVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -11,6 +13,26 @@ const textVariants = {
 };
 
 const WelcomeSection = () => {
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const toggleMusic = () => {
+    if (!audioRef.current) return;
+
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+
+    setIsPlaying(!isPlaying);
+  };
+
+  useEffect(() => {
+    audioRef.current?.load();
+    audioRef.current!.volume = 0.5;
+  }, []);
+
   return (
     <section
       className="relative min-h-[100vh] flex flex-col justify-center items-center text-center"
@@ -29,23 +51,23 @@ const WelcomeSection = () => {
 
       <img
         src="/assets/butterfly.png"
-        alt="Butterfly"
         className="absolute top-[10%] left-[5%] w-7 animate-float1 z-10"
+        alt="Butterfly"
       />
       <img
         src="/assets/butterfly.png"
-        alt="Butterfly"
         className="absolute top-[30%] right-[8%] w-10 animate-float2 z-10"
+        alt="Butterfly"
       />
       <img
         src="/assets/butterfly.png"
-        alt="Butterfly"
         className="absolute bottom-[45%] left-[10%] w-15 animate-float3 z-10"
+        alt="Butterfly"
       />
       <img
         src="/assets/butterfly.png"
-        alt="Butterfly"
         className="absolute bottom-[25%] right-[15%] w-20 animate-float4 z-10"
+        alt="Butterfly"
       />
 
       <div className="absolute inset-0 bg-white/50 backdrop-blur-sm z-0" />
@@ -126,6 +148,27 @@ const WelcomeSection = () => {
           <span className="italic text-[10px]">Reception to follow</span>
         </motion.p>
       </div>
+
+      <motion.button
+        onClick={toggleMusic}
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1.5, type: "spring", stiffness: 200 }}
+        className={`z-20 flex items-center justify-center w-14 h-14 
+            bg-white/80 backdrop-blur-md rounded-full shadow-lg 
+            hover:scale-105 transition-transform ring-2 ring-white/60 absolute top-[73.5%] ${
+              isPlaying && "hidden"
+            }`}
+      >
+        <img
+          src={isPlaying ? "/assets/Pause.png" : "/assets/Play.png"}
+          alt={isPlaying ? "Pause Music" : "Play Music"}
+          className="w-8 h-8"
+        />
+      </motion.button>
+
+      <MusicPlayer audioRef={audioRef} />
+
       <CountdownTimer startDelay={2} />
     </section>
   );
