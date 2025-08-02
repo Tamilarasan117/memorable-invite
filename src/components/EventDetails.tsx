@@ -48,7 +48,7 @@ const getEventIcon = (title: string) => {
 
 const EventDetails = () => {
   return (
-    <section className="relative py-16 px-4 bg-white overflow-hidden">
+    <section className="relative py-10 px-4 bg-white overflow-hidden">
       <img
         src="/assets/Heart.png"
         alt="Heart"
@@ -70,9 +70,15 @@ const EventDetails = () => {
         className="absolute bottom-[28%] right-[15%] w-2 animate-float4 z-10"
       />
 
-      <h2 className="text-3xl font-bold text-center font-primary text-pink-800 mb-16">
+      <motion.h2
+        className="text-3xl font-bold text-center font-primary text-pink-800 mb-10"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+      >
         Event Schedule
-      </h2>
+      </motion.h2>
 
       <div className="relative mx-auto max-w-3xl">
         <div className="absolute left-1/2 top-0 transform -translate-x-1/2 w-[2px] h-full bg-gray-300 z-0" />
