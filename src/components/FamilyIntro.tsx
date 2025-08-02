@@ -47,7 +47,7 @@ const FamilyIntro = () => {
       <img
         src="/assets/butterfly.png"
         alt="Heart"
-        className="absolute bottom-[38%] right-[15%] w-10 animate-float4 z-10"
+        className="absolute bottom-[1%] right-[15%] w-10 animate-float4 z-10"
       />
       <motion.div
         className="max-w-2xl mx-auto mb-12"
@@ -119,6 +119,17 @@ const FamilyIntro = () => {
         </motion.div>
       </div>
 
+      <div className="mt-5 max-w-3xl mx-auto mb-5">
+        <video
+          src="/video/family.mp4"
+          controls
+          playsInline
+          className="w-full rounded-xl shadow-lg border border-gray-200"
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
       <div className="space-y-2 overflow-hidden">
         <div className="overflow-hidden max-w-[100vw]">
           <motion.div
@@ -131,7 +142,7 @@ const FamilyIntro = () => {
                 key={`row1-${i}`}
                 src={src}
                 alt={`Family ${i}`}
-                className="h-30 w-52 object-cover rounded-xl shadow-md border border-gray-100 flex-shrink-0"
+                className="h-35 w-60 object-cover rounded-xl shadow-md border border-gray-100 flex-shrink-0"
               />
             ))}
           </motion.div>
@@ -148,7 +159,7 @@ const FamilyIntro = () => {
                 key={`row2-${i}`}
                 src={src}
                 alt={`Family ${i}`}
-                className="h-30 w-52 object-cover rounded-xl shadow-md border border-gray-100 flex-shrink-0"
+                className="h-35 w-60 object-cover rounded-xl shadow-md border border-gray-100 flex-shrink-0"
               />
             ))}
           </motion.div>
