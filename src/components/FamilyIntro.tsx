@@ -120,7 +120,7 @@ const FamilyIntro = () => {
         </motion.div>
       </div>
 
-      <div className="relative max-w-5xl mx-auto overflow-hidden h-[480px]">
+      <div className="relative max-w-5xl mx-auto overflow-hidden h-[640px]">
         <div className="flex gap-4">
           <motion.div
             className="flex flex-col gap-3 w-1/3"
