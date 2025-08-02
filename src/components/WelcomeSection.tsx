@@ -149,27 +149,14 @@ const WelcomeSection = () => {
         </motion.p>
       </div>
 
-      <motion.button
-        onClick={toggleMusic}
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1.5, type: "spring", stiffness: 200 }}
-        className={`z-20 flex items-center justify-center w-14 h-14 
-            bg-white/80 backdrop-blur-md rounded-full shadow-lg 
-            hover:scale-105 transition-transform ring-2 ring-white/60 absolute top-[73.5%] ${
-              isPlaying && "hidden"
-            }`}
-      >
-        <img
-          src={isPlaying ? "/assets/Pause.png" : "/assets/Play.png"}
-          alt={isPlaying ? "Pause Music" : "Play Music"}
-          className="w-8 h-8"
-        />
-      </motion.button>
-
       <MusicPlayer audioRef={audioRef} />
 
-      <CountdownTimer startDelay={2} />
+      <CountdownTimer
+  startDelay={2}
+  isPlaying={isPlaying}
+  toggleMusic={toggleMusic}
+/>
+
     </section>
   );
 };

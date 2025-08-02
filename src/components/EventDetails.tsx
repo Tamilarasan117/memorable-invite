@@ -118,7 +118,7 @@ const EventDetails = () => {
                     alt={event.title}
                     className="w-5 h-5 object-contain"
                   />
-                  <h3 className="text-lg font-bold text-purple-800">
+                  <h3 className="text-lg font-bold font-primary text-purple-800">
                     {event.title}
                   </h3>
                 </div>
@@ -133,38 +133,6 @@ const EventDetails = () => {
             </motion.div>
           );
         })}
-
-        <div className="flex flex-row justify-center items-center gap-6 mt-15 flex-nowrap">
-          <motion.div
-            className="flex flex-col items-center min-w-[110px]"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src="/assets/QR_Code.jpg"
-              className="w-28 h-28 object-contain mb-2"
-              alt="Invitation QR"
-            />
-            <p className="text-xs text-gray-700 font-medium">Invitation QR</p>
-          </motion.div>
-
-          <motion.div
-            className="flex flex-col items-center min-w-[110px]"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src="/assets/QR_Code.jpg"
-              className="w-28 h-28 object-contain mb-2"
-              alt="Location QR"
-            />
-            <p className="text-xs text-gray-700 font-medium">Location QR</p>
-          </motion.div>
-        </div>
       </div>
     </section>
   );

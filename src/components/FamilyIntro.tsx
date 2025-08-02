@@ -10,20 +10,45 @@ const textVariants = {
 };
 
 const photoList = [
-  "/assets/family1.jpg",
-  "/assets/family2.jpg",
-  "/assets/family3.jpg",
-  "/assets/family4.jpg",
-  "/assets/family5.jpg",
-  "/assets/family6.jpg",
-  "/assets/family7.jpg",
-  "/assets/family8.jpg",
-  "/assets/family9.jpg",
+  "/assets/group1.jpg",
+  "/assets/group2.jpg",
+  "/assets/group3.jpg",
+  "/assets/group4.jpg",
+  "/assets/group5.jpg",
+  "/assets/group6.jpg",
+  "/assets/group7.jpg",
+  "/assets/group8.jpg",
+  "/assets/group9.jpg",
 ];
 
 const FamilyIntro = () => {
   return (
     <section className="bg-white py-16 px-6 overflow-hidden text-center relative">
+      <img
+        src="/assets/Heart.png"
+        alt="Heart"
+        className="absolute top-[10%] left-[5%] w-2 animate-float1 z-10"
+      />
+      <img
+        src="/assets/butterfly.png"
+        alt="Heart"
+        className="absolute bottom-[58%] right-[45%] w-10 animate-float4 z-10"
+      />
+      <img
+        src="/assets/Heart.png"
+        alt="Heart"
+        className="absolute top-[23%] right-[8%] w-2 animate-float2 z-10"
+      />
+      <img
+        src="/assets/Heart.png"
+        alt="Heart"
+        className="absolute bottom-[65%] left-[10%] w-2 animate-float3 z-10"
+      />
+      <img
+        src="/assets/butterfly.png"
+        alt="Heart"
+        className="absolute bottom-[38%] right-[15%] w-10 animate-float4 z-10"
+      />
       <motion.div
         className="max-w-2xl mx-auto mb-12"
         initial="hidden"
@@ -52,7 +77,7 @@ const FamilyIntro = () => {
 
       <div className="flex flex-col sm:flex-row justify-center gap-6 mb-3">
         <motion.div
-          className="bg-pink-50 border border-pink-200 p-6 rounded-lg shadow-md w-full sm:w-1/2"
+          className="bg-blue-50 border border-blue-200 p-6 rounded-lg shadow-md w-full sm:w-1/2"
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -63,7 +88,7 @@ const FamilyIntro = () => {
             alt="Bride"
             className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-lg mb-4"
           />
-          <h3 className="text-lg font-bold text-pink-700 mb-1">
+          <h3 className="text-lg font-bold font-primary text-pink-700 mb-1">
             Bride – Anjali
           </h3>
           <p className="text-sm text-gray-600 font-secondary">
@@ -73,7 +98,7 @@ const FamilyIntro = () => {
         </motion.div>
 
         <motion.div
-          className="bg-blue-50 border border-blue-200 p-6 rounded-lg shadow-md w-full sm:w-1/2"
+          className="bg-pink-50 border border-pink-200 p-6 rounded-lg shadow-md w-full sm:w-1/2"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -84,7 +109,7 @@ const FamilyIntro = () => {
             alt="Groom"
             className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-lg mb-4"
           />
-          <h3 className="text-lg font-bold text-blue-700 mb-1">
+          <h3 className="text-lg font-bold font-primary text-blue-700 mb-1">
             Groom – Arjun
           </h3>
           <p className="text-sm text-gray-600 font-secondary">
@@ -94,7 +119,7 @@ const FamilyIntro = () => {
         </motion.div>
       </div>
 
-      <div className="space-y-4 overflow-hidden">
+      <div className="space-y-2 overflow-hidden">
         <div className="overflow-hidden max-w-[100vw]">
           <motion.div
             className="flex gap-2 w-max px-2"
@@ -106,7 +131,7 @@ const FamilyIntro = () => {
                 key={`row1-${i}`}
                 src={src}
                 alt={`Family ${i}`}
-                className="h-40 w-64 object-cover rounded-xl shadow-md border border-gray-100 flex-shrink-0"
+                className="h-30 w-52 object-cover rounded-xl shadow-md border border-gray-100 flex-shrink-0"
               />
             ))}
           </motion.div>
@@ -123,7 +148,7 @@ const FamilyIntro = () => {
                 key={`row2-${i}`}
                 src={src}
                 alt={`Family ${i}`}
-                className="h-40 w-64 object-cover rounded-xl shadow-md border border-gray-100 flex-shrink-0"
+                className="h-30 w-52 object-cover rounded-xl shadow-md border border-gray-100 flex-shrink-0"
               />
             ))}
           </motion.div>

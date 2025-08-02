@@ -18,8 +18,17 @@ const itemVariants = {
     transition: { duration: 0.6 },
   },
 };
+type CountdownTimerProps = {
+  startDelay?: number;
+  isPlaying: boolean;
+  toggleMusic: () => void;
+};
 
-const CountdownTimer = ({ startDelay = 2 }: { startDelay?: number }) => {
+const CountdownTimer = ({
+  startDelay = 2,
+  isPlaying,
+  toggleMusic,
+}: CountdownTimerProps) => {
   const targetDate = new Date("2025-09-04T16:00:00");
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
   const [startAnimation, setStartAnimation] = useState(false);
@@ -50,7 +59,7 @@ const CountdownTimer = ({ startDelay = 2 }: { startDelay?: number }) => {
   return (
     <section
       ref={ref}
-      className="relative bg-white/40 backdrop-blur-md py-6 px-4 rounded-xl max-w-md mx-auto"
+      className="relative bg-white/40 backdrop-blur-md py-6 px-0 rounded-xl max-w-md mx-auto"
     >
       <img
         src="/assets/Heart.png"
@@ -93,13 +102,29 @@ const CountdownTimer = ({ startDelay = 2 }: { startDelay?: number }) => {
             </motion.p>
 
             <motion.div
-              className="flex justify-center gap-2 sm:gap-6 flex-nowrap"
+              className="flex justify-center gap-2 sm:gap-3 flex-nowrap items-center"
               variants={containerVariants}
             >
               <TimeBox label="Days" value={timeLeft.days} />
               <TimeBox label="Hrs" value={timeLeft.hours} />
               <TimeBox label="Mins" value={timeLeft.minutes} />
               <TimeBox label="Secs" value={timeLeft.seconds} />
+
+              <motion.button
+                onClick={toggleMusic}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                variants={itemVariants}
+                className={`ml-3 w-12 h-12 bg-white/80 backdrop-blur-md rounded-full shadow-md flex items-center justify-center transition-transform ring-2 ring-white/60 ${
+                  !isPlaying ? "animate-glow-soft" : ""
+                }`}
+              >
+                <img
+                  src={isPlaying ? "/assets/Pause.png" : "/assets/Play.png"}
+                  alt={isPlaying ? "Pause Music" : "Play Music"}
+                  className="w-6 h-6"
+                />
+              </motion.button>
             </motion.div>
           </>
         )}
@@ -110,21 +135,21 @@ const CountdownTimer = ({ startDelay = 2 }: { startDelay?: number }) => {
 
 const TimeBox = ({ label, value }: { label: string; value: number }) => (
   <motion.div
-    className="bg-white/30 backdrop-blur-lg rounded-2xl px-3 py-3 ring-1 ring-white/30 flex flex-col items-center justify-center"
+    className="bg-white/30 backdrop-blur-lg rounded-xl px-2 py-2 ring-1 ring-white/30 flex flex-col items-center justify-center"
     style={{
-      width: "65px",
-      height: "70px",
+      width: "52px",
+      height: "58px",
       boxShadow: `
-        inset 4px 4px 8px rgba(0, 0, 0, 0.15), 
-        inset -4px -4px 8px rgba(255, 255, 255, 0.6)
+        inset 2px 2px 6px rgba(0, 0, 0, 0.15), 
+        inset -2px -2px 6px rgba(255, 255, 255, 0.5)
       `,
     }}
     variants={itemVariants}
   >
-    <div className="text-[24px] sm:text-[28px] font-bold font-primary text-yellow-600 animate-pulse-gold leading-none">
+    <div className="text-[18px] sm:text-[20px] font-bold font-primary text-yellow-600 animate-pulse-gold leading-none">
       {String(value).padStart(2, "0")}
     </div>
-    <div className="text-[10px] sm:text-xs font-secondary text-gray-700 tracking-wide mt-1">
+    <div className="text-[9px] sm:text-[10px] font-secondary text-gray-700 tracking-wide mt-0.5">
       {label}
     </div>
   </motion.div>

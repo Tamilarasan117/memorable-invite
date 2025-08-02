@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
@@ -6,17 +6,14 @@ const dummyMessages = [
   {
     name: "Ravi",
     message: "Wishing you both a lifetime of love and happiness!",
-    avatar: "/assets/ring.png",
   },
   {
     name: "Divya",
     message: "May your journey together be filled with endless joy ❤️",
-    avatar: "/assets/Heart.png",
   },
   {
     name: "Anand",
     message: "Congratulations! Blessings for a beautiful future.",
-    avatar: "/assets/groom1.png",
   },
 ];
 
@@ -53,6 +50,16 @@ const Blessings = () => {
   const [name, setName] = useState("");
   const [text, setText] = useState("");
 
+  const STORAGE_KEY = "wedding_blessings";
+
+  useEffect(() => {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      setMessages([...parsed, ...dummyMessages]);
+    }
+  }, []);
+
   const handleNext = () => {
     setDirection(1);
     setIndex((prev) => (prev + 1) % messages.length);
@@ -70,10 +77,15 @@ const Blessings = () => {
     const newMsg = {
       name,
       message: text,
-      avatar: "/assets/.png",
     };
 
-    setMessages((prev) => [newMsg, ...prev]);
+    const updated = [
+      newMsg,
+      ...messages.filter((m) => !dummyMessages.includes(m)),
+    ];
+    setMessages([newMsg, ...messages]);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+
     setIndex(0);
     setName("");
     setText("");
@@ -104,7 +116,7 @@ const Blessings = () => {
       <img
         src="/assets/butterfly.png"
         alt="Butterfly"
-        className="absolute bottom-[30%] left-[10%] w-15 animate-float3 z-0"
+        className="absolute bottom-[45%] left-[10%] w-15 animate-float3 z-0"
       />
       <img
         src="/assets/butterfly.png"
@@ -135,7 +147,7 @@ const Blessings = () => {
       </motion.p>
 
       <motion.div
-        className="relative max-w-xl h-[200px] mx-auto"
+        className="relative max-w-xl h-[120px] mx-auto"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -152,12 +164,7 @@ const Blessings = () => {
             exit="exit"
             className="absolute inset-0 flex flex-col items-center px-4"
           >
-            <img
-              src={messages[index].avatar}
-              alt={messages[index].name}
-              className="w-20 h-20 rounded-full object-cover mb-4 shadow-lg shadow-gray-300"
-            />
-            <h3 className="text-md font-semibold text-gray-800">
+            <h3 className="text-3xl font-bold font-primary text-gray-800">
               {messages[index].name}
             </h3>
             <p className="text-sm text-gray-600 mt-2 max-w-md">
@@ -168,7 +175,7 @@ const Blessings = () => {
 
         <button
           onClick={handlePrev}
-          className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center text-xl text-pink-600 hover:bg-pink-100 transition"
+          className="absolute left-3 top-5 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center text-xl text-pink-600 hover:bg-pink-100 transition"
           style={{
             boxShadow:
               "0 4px 6px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.1), 0 2px 4px rgba(255,192,203,0.4)",
@@ -178,7 +185,7 @@ const Blessings = () => {
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center text-xl text-pink-600 hover:bg-pink-100 transition"
+          className="absolute right-3 top-5 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center text-xl text-pink-600 hover:bg-pink-100 transition"
           style={{
             boxShadow:
               "0 4px 6px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.1), 0 2px 4px rgba(255,192,203,0.4)",
