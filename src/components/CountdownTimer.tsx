@@ -83,14 +83,15 @@ const CountdownTimer = ({
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
+            className="px-2"
           >
-            <p className="text-xl sm:text-2xl font-bold font-primary text-pink-700 mb-2">
+            <motion.p className="text-xl sm:text-2xl font-bold font-primary text-pink-700 mb-2" variants={itemVariants}>
               💖 Forever Begins Today 💍
-            </p>
-            <p className="text-sm text-gray-600 font-secondary">
+            </motion.p>
+            <motion.p className="text-sm text-gray-600 font-secondary" variants={itemVariants}>
               Our journey as one begins now. Thank you for being part of our
               story.
-            </p>
+            </motion.p>
           </motion.div>
         ) : (
           <>
