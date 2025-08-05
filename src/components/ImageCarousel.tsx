@@ -31,7 +31,7 @@ const ImageCarousel = () => {
     <section ref={ref} className="bg-white py-12 overflow-hidden relative">
       <img
         src="/assets/butterfly.png"
-        className="absolute top-[16%] left-[6%] w-4 animate-float1 z-10"
+        className="absolute top-[16%] left-[6%] w-10 animate-float1 z-10"
         alt="Butterfly"
       />
       <img
@@ -40,9 +40,9 @@ const ImageCarousel = () => {
         alt="Butterfly"
       />
       <img
-        src="/assets/butterfly.png"
-        className="absolute top-[60%] left-[48%] w-5 animate-float3 z-10"
+        src="/assets/Heart.png"
         alt="Butterfly"
+        className="absolute bottom-[10%] right-[10%] w-2 animate-float3 z-10"
       />
 
       <motion.div

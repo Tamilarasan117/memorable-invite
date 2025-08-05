@@ -102,6 +102,16 @@ const CoupleIntro = () => {
         className="absolute top-[30%] right-[8%] w-4 animate-float2 z-10"
       />
       <img
+        src="/assets/butterfly.png"
+        className="absolute top-[15%] right-[15%] w-10 animate-float2 z-10"
+        alt="Butterfly"
+      />
+      <img
+        src="/assets/butterfly.png"
+        className="absolute bottom-[45%] left-[10%] w-15 animate-float3 z-10"
+        alt="Butterfly"
+      />
+      <img
         src="/assets/Heart.png"
         alt="Butterfly"
         className="absolute bottom-[35%] left-[10%] w-2 animate-float3 z-10"
@@ -110,6 +120,16 @@ const CoupleIntro = () => {
         src="/assets/Heart.png"
         alt="Butterfly"
         className="absolute bottom-[45%] right-[15%] w-3 animate-float4 z-10"
+      />
+      <img
+        src="/assets/butterfly.png"
+        className="absolute bottom-[15%] left-[25%] w-10 animate-float3 z-10"
+        alt="Butterfly"
+      />
+      <img
+        src="/assets/Heart.png"
+        alt="Butterfly"
+        className="absolute bottom-[10%] right-[10%] w-2 animate-float3 z-10"
       />
 
       <div className="relative w-full max-w-[600px] h-[320px] mx-auto mb-12">

@@ -55,9 +55,19 @@ const EventDetails = () => {
         className="absolute top-[10%] left-[5%] w-2 animate-float1 z-10"
       />
       <img
+        src="/assets/butterfly.png"
+        className="absolute top-[15%] right-[15%] w-10 animate-float2 z-10"
+        alt="Butterfly"
+      />
+      <img
         src="/assets/Heart.png"
         alt="Heart"
         className="absolute top-[30%] right-[8%] w-1 animate-float2 z-10"
+      />
+      <img
+        src="/assets/butterfly.png"
+        className="absolute bottom-[5%] left-[10%] w-10 animate-float3 z-10"
+        alt="Butterfly"
       />
       <img
         src="/assets/Heart.png"

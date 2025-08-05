@@ -69,6 +69,16 @@ const WelcomeSection = () => {
         className="absolute bottom-[25%] right-[15%] w-20 animate-float4 z-10"
         alt="Butterfly"
       />
+      <img
+        src="/assets/Heart.png"
+        className="absolute top-[20%] left-[15%] w-3 animate-float4 z-10"
+        alt="heart"
+      />
+      <img
+        src="/assets/Heart.png"
+        className="absolute top-[40%] right-[15%] w-3 animate-float4 z-10"
+        alt="heart"
+      />
 
       <div className="absolute inset-0 bg-white/50 backdrop-blur-sm z-0" />
 

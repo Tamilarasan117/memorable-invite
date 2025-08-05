@@ -20,19 +20,19 @@ const Footer = () => {
         className="absolute top-[10%] left-[5%] w-7 animate-float1 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/Heart.png"
         alt="Butterfly"
-        className="absolute top-[30%] right-[8%] w-10 animate-float2 z-10"
+        className="absolute top-[30%] right-[8%] w-2 animate-float2 z-10"
+      />
+      <img
+        src="/assets/Heart.png"
+        alt="Butterfly"
+        className="absolute bottom-[15%] left-[10%] w-2 animate-float3 z-10"
       />
       <img
         src="/assets/butterfly.png"
         alt="Butterfly"
-        className="absolute bottom-[15%] left-[10%] w-15 animate-float3 z-10"
-      />
-      <img
-        src="/assets/butterfly.png"
-        alt="Butterfly"
-        className="absolute bottom-[5%] right-[15%] w-20 animate-float4 z-10"
+        className="absolute bottom-[5%] right-[15%] w-10 animate-float4 z-10"
       />
     </footer>
   );

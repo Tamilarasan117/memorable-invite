@@ -40,6 +40,11 @@ const FamilyIntro = () => {
         className="absolute top-[23%] right-[8%] w-2 animate-float2 z-10"
       />
       <img
+        src="/assets/butterfly.png"
+        className="absolute top-[15%] right-[15%] w-10 animate-float2 z-10"
+        alt="Butterfly"
+      />
+      <img
         src="/assets/Heart.png"
         alt="Heart"
         className="absolute bottom-[65%] left-[10%] w-2 animate-float3 z-10"
