@@ -8,6 +8,7 @@ import Blessings from "./components/Blessings"
 import MapSection from "./components/MapSection"
 import RSVP from "./components/RSVP"
 import Footer from "./components/Footer"
+import QRCodeSection from "./components/QRCodeSection"
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <GallerySection />
         <Blessings />
         <MapSection />
+        <QRCodeSection />
         <RSVP />
         <Footer />
       </main>
