@@ -8,7 +8,9 @@ const Footer = () => {
         <p className="text-[13px] text-gray-700 font-secondary mt-1">
           Crafted with 💖 to make your moments unforgettable
         </p>
-
+        <p className="text-[11px] text-gray-500 mt-2 font-secondary italic">
+          Made by Memorable Invite Team (Tamilarasan, Raghavan, Jaganath).
+        </p>
         <p className="text-[11px] text-gray-500 mt-2 font-secondary italic">
           © 2025 Memorable Invite. All rights reserved.
         </p>

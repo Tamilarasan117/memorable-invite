@@ -79,3 +79,7 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.qual {
+  @apply font-semibold text-indigo-600 italic;
+}

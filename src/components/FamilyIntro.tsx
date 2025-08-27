@@ -99,12 +99,16 @@ const FamilyIntro = () => {
           <p className="text-sm text-gray-600 font-secondary">
             K. Kuppucami - Calammal <br />
             S. Kaurappan - Chinnapapa <br />
-            Murugan <span>B.A., CRPF</span> - Geetha <span>D.T.Ed.,</span> <br />
-            Mahendran <span>Army</span> - Sangeetha <span>B.Sc.,</span> <br />
-            V. Suryaprakash <span>Army</span> - Pavithra <span>RNRM.,</span> <br />
+            Murugan <span className="italic text-[12px]">B.A., CRPF</span> -
+            Geetha <span className="italic text-[12px]">D.T.Ed.,</span>
+            <br />
+            Mahendran <span className="italic text-[12px]">Army</span> -
+            Sangeetha <span className="italic text-[12px]">B.Sc.,</span> <br />
+            V. Suryaprakash <span className="italic text-[12px]">Army</span> -
+            Pavithra <span className="italic text-[12px]">RNRM.,</span> <br />
             Pritha, Lakshita, Harshita, <br />
             Ritish, Akshaya <br />
-            Vedisenrauan - Bhavani <br/>
+            Vedisenrauan - Bhavani <br />
           </p>
         </motion.div>
 
@@ -126,10 +130,13 @@ const FamilyIntro = () => {
           <p className="text-sm text-gray-600 font-secondary">
             L. Muneeswari - D. Lakshmipathi <br />
             Purusothaman - Nandini <br />
-            L. Raghavan <span>Diploma, B.Voc.,</span> <br />
-            M. Anandhi - (late) D. Mani <br />
+            L. Raghavan{" "}
+            <span className="italic text-[12px]">Diploma, B.Voc.,</span> <br />
+            M. Anandhi - D. Mani{" "}
+            <span className="italic text-[12px]">Ex Army</span> <br />
             M. Anandaraj - Salini <br />
-            S. Jai Kumar, S. Vijay Kumar <span>B.com.,</span> <br />
+            S. Jai Kumar, S. Vijay Kumar{" "}
+            <span className="italic text-[12px]">B.com.,</span> <br />
             Yugamitran, Jeevasuthan, <br />
             Gauri Shankar - Illakiya <br />
             Murali - Deepa <br />

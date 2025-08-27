@@ -81,7 +81,7 @@ const RSVP = () => {
           viewport={{ once: true }}
         >
           <motion.a
-            href="tel:+911234567890"
+            href="tel:+919751375875"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             variants={textVariants}
@@ -93,7 +93,7 @@ const RSVP = () => {
           </motion.a>
 
           <motion.a
-            href="https://wa.me/911234567890?text=Hi%2C%20we'd%20love%20to%20join%20your%20wedding!"
+            href="https://wa.me/919751375875?text=Hi%2C%20we'd%20love%20to%20join%20your%20wedding!"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
