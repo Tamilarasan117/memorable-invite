@@ -138,7 +138,7 @@ const CoupleIntro = () => {
         </div>
         <div className="absolute bottom-3 right-5">
           <CoupleInfo
-            name="K. Vinayakam"
+            name="K. Vinayagam"
             designation="DCE"
             parents="D/o. Mr. K. Kuppucami & Calammal."
             address="Tirupattur Distr, Nattrampalli Taluk, Bandarappalli next Nallakintanapalli Village"
@@ -155,7 +155,7 @@ const CoupleIntro = () => {
         </div>
         <div className="absolute bottom-5 left-5">
           <CoupleInfo
-            name="L. Nitya"
+            name="L. Nithya"
             designation="BCA"
             parents="S/o. Mr. D. Lakshmipathi & Muneeswari."
             address="Tirupattur Distr, Nattrampalli Taluk, Bandarappalli next Nallakintanapalli Village"

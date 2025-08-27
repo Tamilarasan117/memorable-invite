@@ -100,7 +100,7 @@ const WelcomeSection = () => {
               animate="visible"
               custom={1}
             >
-              Vinayakam
+              Vinayagam
             </motion.h1>
 
             <motion.img
@@ -120,7 +120,7 @@ const WelcomeSection = () => {
               animate="visible"
               custom={3}
             >
-              Nitya
+              Nithya
             </motion.h1>
           </div>
         </div>

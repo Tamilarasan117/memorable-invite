@@ -18,7 +18,7 @@ const timelineEvents = [
   {
     title: "Dinner",
     date: "September 4, 2025",
-    time: "7:30 AM",
+    time: "12:00 - 2:30 PM",
     venue: "At Sri Senbhagavalli Wedding Hall, near Indian Bank, Nallakintanapalli",
     side: "left",
   },

@@ -94,10 +94,9 @@ const FamilyIntro = () => {
             className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-lg mb-4"
           />
           <h3 className="text-lg font-bold font-primary text-blue-700 mb-1">
-            Bride - K. Vinayakam
+            Bride - K. Vinayagam
           </h3>
           <p className="text-sm text-gray-600 font-secondary space-y-2">
-  {/* Parents & Main Family */}
   <div>
     K. Kuppucami - Calammal <br />
     S. Kaurappan - Chinnapapa <br />
@@ -109,13 +108,11 @@ const FamilyIntro = () => {
     <span className="italic text-[12px]">RNRM.,</span>
   </div>
 
-  {/* Kutties Section */}
   <div className="mt-3">
     <h4 className="text-xs font-bold text-pink-600 mb-1">Kutties</h4>
     Pritha, Lakshita, Harshita, Ritish, Akshaya
   </div>
 
-  {/* Taymamankal Section */}
   <div className="mt-3">
     <h4 className="text-xs font-bold text-blue-600 mb-1">Taymamankal</h4>
     Vedisenrauan - Bhavani
@@ -137,10 +134,9 @@ const FamilyIntro = () => {
             className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-lg mb-4"
           />
           <h3 className="text-lg font-bold font-primary text-pink-700 mb-1">
-            Groom - L. Nitya
+            Groom - L. Nithya
           </h3>
           <p className="text-sm text-gray-600 font-secondary space-y-2">
-  {/* Parents & Main Family */}
   <div>
     L. Muneeswari - D. Lakshmipathi <br />
     Purusothaman - Nandini <br />
@@ -153,13 +149,11 @@ const FamilyIntro = () => {
     <span className="italic text-[12px]">B.com.,</span>
   </div>
 
-  {/* Kutties Section */}
   <div className="mt-3">
     <h4 className="text-xs font-bold text-pink-600 mb-1">Kutties</h4>
     Yugamitran, Jeevasuthan
   </div>
 
-  {/* Taymamankal Section */}
   <div className="mt-3">
     <h4 className="text-xs font-bold text-blue-600 mb-1">Taymamankal</h4>
     Gauri Shankar - Illakiya <br />

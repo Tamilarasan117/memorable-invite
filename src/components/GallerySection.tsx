@@ -45,7 +45,7 @@ const GallerySection = () => {
           variants={textVariants}
           custom={1}
         >
-          A look into the joyful journey of Vinayakam & Nitya.
+          A look into the joyful journey of Vinayagam & Nithya.
         </motion.p>
       </motion.div>
 
