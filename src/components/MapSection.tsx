@@ -57,7 +57,7 @@ const MapSection = () => {
             Marriage Location
           </h3>
           <a
-            href="https://maps.app.goo.gl/749FNDVLuLFs84G28"
+            href="https://maps.app.goo.gl/mdQFQxBZ9FDsHgdy5"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-pink-600 text-white px-4 py-2 rounded-full font-medium shadow hover:bg-pink-700 transition gap-3"
@@ -78,7 +78,7 @@ const MapSection = () => {
             Reception Location
           </h3>
           <a
-            href="https://maps.app.goo.gl/749FNDVLuLFs84G28"
+            href="https://maps.app.goo.gl/fMTgKfg3PgxThFdu5"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-pink-600 text-white px-4 py-2 rounded-full font-medium shadow hover:bg-pink-700 transition gap-3"

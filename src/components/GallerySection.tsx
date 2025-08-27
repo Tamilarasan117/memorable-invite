@@ -45,8 +45,7 @@ const GallerySection = () => {
           variants={textVariants}
           custom={1}
         >
-          A look into the joyful journey of Anjali & Arjun — from stolen glances
-          to eternal promises.
+          A look into the joyful journey of Vinayakam & Nitya.
         </motion.p>
       </motion.div>
 

@@ -93,12 +93,18 @@ const FamilyIntro = () => {
             alt="Bride"
             className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-lg mb-4"
           />
-          <h3 className="text-lg font-bold font-primary text-pink-700 mb-1">
-            Bride – Anjali
+          <h3 className="text-lg font-bold font-primary text-blue-700 mb-1">
+            Bride - K. Vinayakam
           </h3>
           <p className="text-sm text-gray-600 font-secondary">
-            Anjali is a creative soul, deeply rooted in tradition, with a kind
-            heart and infectious smile. Her presence fills our home with joy.
+            K. Kuppucami - Calammal <br />
+            S. Kaurappan - Chinnapapa <br />
+            Murugan <span>B.A., CRPF</span> - Geetha <span>D.T.Ed.,</span> <br />
+            Mahendran <span>Army</span> - Sangeetha <span>B.Sc.,</span> <br />
+            V. Suryaprakash <span>Army</span> - Pavithra <span>RNRM.,</span> <br />
+            Pritha, Lakshita, Harshita, <br />
+            Ritish, Akshaya <br />
+            Vedisenrauan - Bhavani <br/>
           </p>
         </motion.div>
 
@@ -114,12 +120,20 @@ const FamilyIntro = () => {
             alt="Groom"
             className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-lg mb-4"
           />
-          <h3 className="text-lg font-bold font-primary text-blue-700 mb-1">
-            Groom – Arjun
+          <h3 className="text-lg font-bold font-primary text-pink-700 mb-1">
+            Groom - L. Nitya
           </h3>
           <p className="text-sm text-gray-600 font-secondary">
-            Arjun is full of charm and compassion, always the light of every
-            room. His dedication to family is as strong as his sense of humor.
+            L. Muneeswari - D. Lakshmipathi <br />
+            Purusothaman - Nandini <br />
+            L. Raghavan <span>Diploma, B.Voc.,</span> <br />
+            M. Anandhi - (late) D. Mani <br />
+            M. Anandaraj - Salini <br />
+            S. Jai Kumar, S. Vijay Kumar <span>B.com.,</span> <br />
+            Yugamitran, Jeevasuthan, <br />
+            Gauri Shankar - Illakiya <br />
+            Murali - Deepa <br />
+            Chandrasekhar - Priya <br />
           </p>
         </motion.div>
       </div>

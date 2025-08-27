@@ -83,7 +83,7 @@ const WelcomeSection = () => {
       <div className="absolute inset-0 bg-white/50 backdrop-blur-sm z-0" />
 
       <div className="relative z-10 w-full max-w-[320px] mx-auto py-10">
-        <div className="relative w-[325px] h-[325px] mx-auto">
+        <div className="relative w-[330px] h-[330px] mx-auto">
           <motion.img
             src="/assets/Welcome_animation_img.png"
             alt="Floral Ring"
@@ -100,7 +100,7 @@ const WelcomeSection = () => {
               animate="visible"
               custom={1}
             >
-              Karthik
+              Vinayakam
             </motion.h1>
 
             <motion.img
@@ -120,7 +120,7 @@ const WelcomeSection = () => {
               animate="visible"
               custom={3}
             >
-              Aarthi
+              Nitya
             </motion.h1>
           </div>
         </div>
@@ -144,7 +144,7 @@ const WelcomeSection = () => {
         >
           SEPTEMBER{" "}
           <span className="text-base font-bold text-pink-700">04 & 05</span> at
-          6 PM
+          4:30 - 6:00 AM
         </motion.p>
 
         <motion.p
@@ -154,7 +154,6 @@ const WelcomeSection = () => {
           animate="visible"
           custom={6}
         >
-          @ Chennai, Tamil Nadu <br />
           <span className="italic text-[10px]">Reception to follow</span>
         </motion.p>
       </div>

@@ -29,7 +29,7 @@ const CountdownTimer = ({
   isPlaying,
   toggleMusic,
 }: CountdownTimerProps) => {
-  const targetDate = new Date("2025-09-04T16:00:00");
+  const targetDate = new Date("2025-09-04T06:00:00");
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
   const [startAnimation, setStartAnimation] = useState(false);
   const [isTimeUp, setIsTimeUp] = useState(false);
