@@ -4,7 +4,7 @@ import ImageCarousel from "./components/ImageCarousel"
 import EventDetails from "./components/EventDetails"
 import FamilyIntro from "./components/FamilyIntro"
 import GallerySection from "./components/GallerySection"
-import Blessings from "./components/Blessings"
+// import Blessings from "./components/Blessings"
 import MapSection from "./components/MapSection"
 import RSVP from "./components/RSVP"
 import Footer from "./components/Footer"
@@ -20,7 +20,7 @@ const App = () => {
         <EventDetails />
         <FamilyIntro />
         <GallerySection />
-        <Blessings />
+        {/* <Blessings /> */}
         <MapSection />
         {/* <QRCodeSection /> */}
         <RSVP />

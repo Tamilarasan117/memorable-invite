@@ -141,7 +141,7 @@ const CoupleIntro = () => {
             name="K. Vinayagam"
             designation="DCE"
             parents="D/o. Mr. K. Kuppucami & Calammal."
-            address="Tirupattur Distr, Nattrampalli Taluk, Bandarappalli next Nallakintanapalli Village"
+            address="Tirupattur Dist, Nattrampalli Taluk, Bandarappalli next Nallakintanapalli Village"
             index={1}
             align="right"
             from="right"
@@ -158,7 +158,7 @@ const CoupleIntro = () => {
             name="L. Nithya"
             designation="BCA"
             parents="S/o. Mr. D. Lakshmipathi & Muneeswari."
-            address="Tirupattur Distr, Nattrampalli Taluk, Bandarappalli next Nallakintanapalli Village"
+            address="Tirupattur Dist, Nattrampalli Taluk, Bandarappalli next Nallakintanapalli Village"
             index={2}
             align="left"
             from="left"
