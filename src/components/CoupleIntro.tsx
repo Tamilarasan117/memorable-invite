@@ -23,7 +23,7 @@ const CoupleCard = ({
 
   return (
     <motion.div
-      className={`w-[275px] h-[275px] bg-center bg-cover`}
+      className={`w-[300px] h-[300px] bg-center bg-cover`}
       style={{
         backgroundImage: image,
         backgroundPosition: backgroundPosition,
@@ -134,11 +134,11 @@ const CoupleIntro = () => {
         className="absolute bottom-[10%] right-[10%] w-2 animate-float3 z-10"
       />
 
-      <div className="relative w-full max-w-[600px] h-[320px] mx-auto mb-12">
-        <div className="absolute top-0 left-0">
-          <CoupleCard backgroundPosition="left" from="left" image="url('/assets/images/groom2.png')" />
+      <div className="relative w-full max-w-[600px] h-[325px] mx-auto mb-12">
+        <div className="absolute top-5 left-0">
+          <CoupleCard backgroundPosition="left" from="left" image="url('/assets/images/groom3.png')" />
         </div>
-        <div className="absolute bottom-3 right-5">
+        <div className="absolute bottom-0 right-5">
           <CoupleInfo
             name="K. Vinayagam"
             designation="DCE"
@@ -153,9 +153,9 @@ const CoupleIntro = () => {
 
       <div className="relative w-full max-w-[600px] h-[320px] mx-auto">
         <div className="absolute top-0 right-0">
-          <CoupleCard backgroundPosition="right" from="right" image="url('/assets/images/bride7.png')" />
+          <CoupleCard backgroundPosition="right" from="right" image="url('/assets/images/bride8.png')" />
         </div>
-        <div className="absolute bottom-5 left-5">
+        <div className="absolute bottom-0 left-5">
           <CoupleInfo
             name="L. Nithya"
             designation="BCA"
