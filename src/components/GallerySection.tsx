@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 
 const photoList = [
+  "/assets/images/couple1.jpg",
+  "/assets/images/bride1.jpg",
   "/assets/images/family1.jpg",
   "/assets/images/bride5.jpg",
   "/assets/images/family2.jpg",
