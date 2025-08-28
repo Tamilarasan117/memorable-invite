@@ -11,11 +11,9 @@ const MusicPlayer = ({ audioRef, isPlaying }: MusicPlayerProps) => {
     if (audioRef.current) {
       audioRef.current.volume = 0.5;
 
-      // Try autoplay on load
       const playAttempt = audioRef.current.play();
       if (playAttempt !== undefined) {
         playAttempt.catch(() => {
-          // Autoplay blocked → stay paused until user clicks play
           console.warn("Autoplay blocked by browser, waiting for user action.");
         });
       }
@@ -36,6 +34,7 @@ const MusicPlayer = ({ audioRef, isPlaying }: MusicPlayerProps) => {
       ref={audioRef}
       src="/audio/BG_Music_Ringtone.mp3"
       loop
+      autoPlay
       preload="auto"
     />
   );
