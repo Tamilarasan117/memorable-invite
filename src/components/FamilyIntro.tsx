@@ -13,6 +13,7 @@ const photoList = [
   "/assets/images/group1.jpg",
   "/assets/images/bride6.jpg",
   "/assets/images/groom1.jpg",
+  "/assets/images/group2.jpg",
   "/assets/images/bride3.jpg",
 ];
 

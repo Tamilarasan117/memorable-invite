@@ -5,13 +5,16 @@ const photoList = [
   "/assets/images/bride1.jpg",
   "/assets/images/family1.jpg",
   "/assets/images/bride5.jpg",
+  "/assets/images/family7.jpg",
   "/assets/images/family2.jpg",
   "/assets/images/bride1.jpg",
   "/assets/images/groom1.jpg",
+  "/assets/images/family6.jpg",
   "/assets/images/family3.jpg",
   "/assets/images/bride3.jpg",
   "/assets/images/family4.jpg",
   "/assets/images/bride6.jpg",
+  "/assets/images/family5.jpg",
 ];
 
 const textVariants = {
