@@ -94,31 +94,33 @@ const FamilyIntro = () => {
             className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-lg mb-4"
           />
           <h3 className="text-lg font-bold font-primary text-blue-700 mb-1">
-            Bride - K. Vinayagam
+            Groom - K. Vinayagam
           </h3>
           <p className="text-sm text-gray-600 font-secondary space-y-2">
-  <div>
-    K. Kuppucami - Calammal <br />
-    S. Kaurappan - Chinnapapa <br />
-    Murugan <span className="italic text-[12px]">B.A., CRPF</span> - Geetha{" "}
-    <span className="italic text-[12px]">D.T.Ed.,</span> <br />
-    Mahendran <span className="italic text-[12px]">Army</span> - Sangeetha{" "}
-    <span className="italic text-[12px]">B.Sc.,</span> <br />
-    V. Suryaprakash <span className="italic text-[12px]">Army</span> - Pavithra{" "}
-    <span className="italic text-[12px]">RNRM.,</span>
-  </div>
+            <div>
+              K. Kuppusami - Salammal <br />
+              S. Kaurappan - Chinnapapa <br />
+              Murugan <span className="italic text-[12px]">B.A., CRPF</span> -
+              Geetha <span className="italic text-[12px]">D.T.Ed.,</span> <br />
+              Mahendran <span className="italic text-[12px]">Army</span> -
+              Sangeetha <span className="italic text-[12px]">B.Sc.,</span>{" "}
+              <br />
+              V. Suryaprakash <span className="italic text-[12px]">Army</span> -
+              Pavithra <span className="italic text-[12px]">RNRM.,</span>
+            </div>
 
-  <div className="mt-3">
-    <h4 className="text-xs font-bold text-pink-600 mb-1">Kutties</h4>
-    Pritha, Lakshita, Harshita, Ritish, Akshaya
-  </div>
+            <div className="mt-3">
+              <h4 className="text-xs font-bold text-pink-600 mb-1">Kutties</h4>
+              Pritha, Lakshita, Harshita, Ritish, Akshaya
+            </div>
 
-  <div className="mt-3">
-    <h4 className="text-xs font-bold text-blue-600 mb-1">Taymamankal</h4>
-    Vedisenrauan - Bhavani
-  </div>
-</p>
-
+            <div className="mt-3">
+              <h4 className="text-xs font-bold text-blue-600 mb-1">
+                Taymamankal
+              </h4>
+              Vedisenrauan - Bhavani
+            </div>
+          </p>
         </motion.div>
 
         <motion.div
@@ -134,34 +136,36 @@ const FamilyIntro = () => {
             className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-lg mb-4"
           />
           <h3 className="text-lg font-bold font-primary text-pink-700 mb-1">
-            Groom - L. Nithya
+            Bride - L. Nithya
           </h3>
           <p className="text-sm text-gray-600 font-secondary space-y-2">
-  <div>
-    L. Muneeswari - D. Lakshmipathi <br />
-    Purusothaman - Nandini <br />
-    L. Raghavan <span className="italic text-[12px]">Diploma, B.Voc.,</span>{" "}
-    <br />
-    M. Anandhi - D. Mani{" "}
-    <span className="italic text-[12px]">Ex Army</span> <br />
-    M. Anandaraj - Salini <br />
-    S. Jai Kumar, S. Vijay Kumar{" "}
-    <span className="italic text-[12px]">B.com.,</span>
-  </div>
+            <div>
+              L. Muneaswari - D. Lakshmipathi <br />
+              Purusothaman - Nandini <br />
+              L. Raghavan{" "}
+              <span className="italic text-[12px]">Diploma, B.Voc.,</span>{" "}
+              <br />
+              M. Anandhi - D. Mani{" "}
+              <span className="italic text-[12px]">Ex Army</span> <br />
+              M. Anandaraj - Salini <br />
+              S. Jai Kumar, S. Vijay Kumar{" "}
+              <span className="italic text-[12px]">B.com.,</span>
+            </div>
 
-  <div className="mt-3">
-    <h4 className="text-xs font-bold text-pink-600 mb-1">Kutties</h4>
-    Yugamitran, Jeevasuthan
-  </div>
+            <div className="mt-3">
+              <h4 className="text-xs font-bold text-pink-600 mb-1">Kutties</h4>
+              Yugamitran, Jeevasuthan
+            </div>
 
-  <div className="mt-3">
-    <h4 className="text-xs font-bold text-blue-600 mb-1">Taymamankal</h4>
-    Gauri Shankar - Illakiya <br />
-    Murali - Deepa <br />
-    Chandrasekhar - Priya
-  </div>
-</p>
-
+            <div className="mt-3">
+              <h4 className="text-xs font-bold text-blue-600 mb-1">
+                Taymamankal
+              </h4>
+              Gauri Shankar - Illakiya <br />
+              Murali - Deepa <br />
+              Chandrasekhar - Priya
+            </div>
+          </p>
         </motion.div>
       </div>
 
