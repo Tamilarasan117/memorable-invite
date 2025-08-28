@@ -4,16 +4,8 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 const dummyMessages = [
   {
-    name: "Ravi",
-    message: "Wishing you both a lifetime of love and happiness!",
-  },
-  {
-    name: "Divya",
-    message: "May your journey together be filled with endless joy ❤️",
-  },
-  {
-    name: "Anand",
-    message: "Congratulations! Blessings for a beautiful future.",
+    username: "Raghavan",
+    message: "Wishing you both a lifetime of love and happiness ❤️!",
   },
 ];
 
@@ -50,14 +42,11 @@ const Blessings = () => {
   const [name, setName] = useState("");
   const [text, setText] = useState("");
 
-  const STORAGE_KEY = "wedding_blessings";
-
   useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored) {
-      const parsed = JSON.parse(stored);
-      setMessages([...parsed, ...dummyMessages]);
-    }
+    fetch("http://localhost:5000/api/blessings")
+      .then((res) => res.json())
+      .then((data) => setMessages([...data, ...dummyMessages]))
+      .catch((err) => console.error("Failed to fetch blessings:", err));
   }, []);
 
   const handleNext = () => {
@@ -70,25 +59,27 @@ const Blessings = () => {
     setIndex((prev) => (prev - 1 + messages.length) % messages.length);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !text.trim()) return;
 
-    const newMsg = {
-      name,
-      message: text,
-    };
+    const newMsg = { username: name, message: text };
 
-    const updated = [
-      newMsg,
-      ...messages.filter((m) => !dummyMessages.includes(m)),
-    ];
-    setMessages([newMsg, ...messages]);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+    try {
+      const res = await fetch("http://localhost:5000/api/blessings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newMsg),
+      });
 
-    setIndex(0);
-    setName("");
-    setText("");
+      const saved = await res.json();
+      setMessages([saved, ...messages]);
+      setIndex(0);
+      setName("");
+      setText("");
+    } catch (err) {
+      console.error("Error submitting blessing:", err);
+    }
   };
 
   return (
@@ -165,7 +156,7 @@ const Blessings = () => {
             className="absolute inset-0 flex flex-col items-center px-4"
           >
             <h3 className="text-3xl font-bold font-primary text-gray-800">
-              {messages[index].name}
+              {messages[index].username}
             </h3>
             <p className="text-sm text-gray-600 mt-2 max-w-md">
               {messages[index].message}

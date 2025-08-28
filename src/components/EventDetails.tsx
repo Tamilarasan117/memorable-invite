@@ -17,11 +17,18 @@ const timelineEvents = [
   },
   {
     title: "Dinner",
-    date: "September 4, 2025",
+    date: "September 5, 2025",
     time: "12:00 - 2:30 PM",
     venue: "At Sri Senbhagavalli Wedding Hall, near Indian Bank, Nattrampalli",
     side: "left",
   },
+  // {
+  //   title: "Party",
+  //   date: "September 5, 2025",
+  //   time: "8:30 PM",
+  //   venue: "Hotel Atrium Rooftop, Nagercoil, Tamil Nadu",
+  //   side: "right",
+  // }
 ];
 
 const getEventIcon = (title: string) => {
