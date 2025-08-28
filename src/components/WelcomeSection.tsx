@@ -158,7 +158,7 @@ const WelcomeSection = () => {
         </motion.p>
       </div>
 
-      <MusicPlayer audioRef={audioRef} />
+      <MusicPlayer audioRef={audioRef} isPlaying={isPlaying} />
 
       <CountdownTimer
   startDelay={2}
