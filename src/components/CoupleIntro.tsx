@@ -23,7 +23,7 @@ const CoupleCard = ({
 
   return (
     <motion.div
-      className={`w-[250px] h-[275px] bg-center bg-cover`}
+      className={`w-[275px] h-[275px] bg-center bg-cover`}
       style={{
         backgroundImage: image,
         backgroundPosition: backgroundPosition,
