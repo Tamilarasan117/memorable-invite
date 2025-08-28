@@ -9,7 +9,7 @@ type MusicPlayerProps = {
 const MusicPlayer = ({ audioRef, isPlaying }: MusicPlayerProps) => {
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = 0.5;
+      audioRef.current.volume = 0.3;
 
       const playAttempt = audioRef.current.play();
       if (playAttempt !== undefined) {

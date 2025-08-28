@@ -43,11 +43,19 @@ const Blessings = () => {
   const [text, setText] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/blessings")
+    fetch("https://memorable-invite-backend.onrender.com/api/blessings")
       .then((res) => res.json())
       .then((data) => setMessages([...data, ...dummyMessages]))
       .catch((err) => console.error("Failed to fetch blessings:", err));
   }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDirection(1);
+      setIndex((prev) => (prev + 1) % messages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [messages]);
 
   const handleNext = () => {
     setDirection(1);
@@ -66,11 +74,14 @@ const Blessings = () => {
     const newMsg = { username: name, message: text };
 
     try {
-      const res = await fetch("http://localhost:5000/api/blessings", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newMsg),
-      });
+      const res = await fetch(
+        "https://memorable-invite-backend.onrender.com/api/blessings",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(newMsg),
+        }
+      );
 
       const saved = await res.json();
       setMessages([saved, ...messages]);
@@ -172,7 +183,8 @@ const Blessings = () => {
               "0 4px 6px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.1), 0 2px 4px rgba(255,192,203,0.4)",
           }}
         >
-          <HiChevronLeft />
+          {" "}
+          <HiChevronLeft />{" "}
         </button>
         <button
           onClick={handleNext}
@@ -182,7 +194,8 @@ const Blessings = () => {
               "0 4px 6px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.1), 0 2px 4px rgba(255,192,203,0.4)",
           }}
         >
-          <HiChevronRight />
+          {" "}
+          <HiChevronRight />{" "}
         </button>
       </motion.div>
 
