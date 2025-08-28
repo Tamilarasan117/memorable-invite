@@ -10,6 +10,7 @@ const MusicPlayer = ({ audioRef }: MusicPlayerProps) => {
       ref={audioRef}
       src="/audio/BG_Music_Ringtone.mp3"
       loop
+      autoPlay
       preload="auto"
     />
   );

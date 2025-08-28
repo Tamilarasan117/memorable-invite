@@ -142,7 +142,7 @@ const CoupleIntro = () => {
           <CoupleInfo
             name="K. Vinayagam"
             designation="DCE"
-            parents="D/o. Mr. K. Kuppucami & Calammal."
+            parents="D/o. Mr. K. Kuppusami & Salammal."
             address="Tirupattur Dist, Nattrampalli Taluk, Bandarappalli next Nallakintanapalli Village"
             index={1}
             align="right"
