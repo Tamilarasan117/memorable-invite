@@ -10,15 +10,10 @@ const textVariants = {
 };
 
 const photoList = [
-  "/assets/group1.jpg",
-  "/assets/group2.jpg",
-  "/assets/group3.jpg",
-  "/assets/group4.jpg",
-  "/assets/group5.jpg",
-  "/assets/group6.jpg",
-  "/assets/group7.jpg",
-  "/assets/group8.jpg",
-  "/assets/group9.jpg",
+  "/assets/images/group1.jpg",
+  "/assets/images/bride6.jpg",
+  "/assets/images/groom1.jpg",
+  "/assets/images/bride3.jpg",
 ];
 
 const FamilyIntro = () => {
