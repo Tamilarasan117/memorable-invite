@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 
 const photoList = [
-  "/assets/family1.jpg",
-  "/assets/family2.jpg",
-  "/assets/family3.jpg",
-  "/assets/family4.jpg",
-  "/assets/family5.jpg",
-  "/assets/family6.jpg",
-  "/assets/family7.jpg",
-  "/assets/family8.jpg",
-  "/assets/family9.jpg",
+  "/assets/images/family1.jpg",
+  "/assets/images/bride5.jpg",
+  "/assets/images/family2.jpg",
+  "/assets/images/bride1.jpg",
+  "/assets/images/groom1.jpg",
+  "/assets/images/family3.jpg",
+  "/assets/images/bride3.jpg",
+  "/assets/images/family4.jpg",
+  "/assets/images/bride6.jpg",
 ];
 
 const textVariants = {

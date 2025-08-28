@@ -89,8 +89,8 @@ const FamilyIntro = () => {
           viewport={{ once: true }}
         >
           <img
-            src="/assets/bride.jpg"
-            alt="Bride"
+            src="/assets/images/groom1.jpg"
+            alt="Groom"
             className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-lg mb-4"
           />
           <h3 className="text-lg font-bold font-primary text-blue-700 mb-1">
@@ -131,8 +131,8 @@ const FamilyIntro = () => {
           viewport={{ once: true }}
         >
           <img
-            src="/assets/groom.jpg"
-            alt="Groom"
+            src="/assets/images/bride3.jpg"
+            alt="Bride"
             className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-lg mb-4"
           />
           <h3 className="text-lg font-bold font-primary text-pink-700 mb-1">
