@@ -135,7 +135,7 @@ const CoupleIntro = () => {
       />
 
       <div className="relative w-full max-w-[600px] h-[325px] mx-auto mb-12">
-        <div className="absolute top-5 left-0">
+        <div className="absolute top-0 left-0">
           <CoupleCard backgroundPosition="left" from="left" image="url('/assets/images/groom3.png')" />
         </div>
         <div className="absolute bottom-0 right-5">
