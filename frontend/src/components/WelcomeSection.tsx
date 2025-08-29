@@ -160,12 +160,29 @@ const WelcomeSection = () => {
 
       <MusicPlayer audioRef={audioRef} isPlaying={isPlaying} />
 
-      <CountdownTimer
-  startDelay={2}
-  isPlaying={isPlaying}
-  toggleMusic={toggleMusic}
-/>
+<motion.button
+  onClick={toggleMusic}
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  animate={!isPlaying ? { scale: [1, 1.15, 1] } : {}}
+  transition={{
+    duration: 1.5,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className={`relative bottom-5 mt-4 w-12 h-12 bg-white/80 backdrop-blur-md rounded-full shadow-pink-600 shadow-md flex items-center justify-center transition-transform ring-2 ring-white/60 ${
+    !isPlaying ? "animate-glow-soft" : ""
+  }`}
+>
+  <img
+    src={isPlaying ? "/assets/Pause.png" : "/assets/Play.png"}
+    alt={isPlaying ? "Pause Music" : "Play Music"}
+    className="w-6 h-6"
+  />
+</motion.button>
 
+
+<CountdownTimer startDelay={2} isPlaying={isPlaying} toggleMusic={toggleMusic} />
     </section>
   );
 };

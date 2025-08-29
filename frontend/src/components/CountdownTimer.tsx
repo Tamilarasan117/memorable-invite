@@ -111,7 +111,7 @@ const CountdownTimer = ({
               <TimeBox label="Mins" value={timeLeft.minutes} />
               <TimeBox label="Secs" value={timeLeft.seconds} />
 
-              <motion.button
+              {/* <motion.button
                 onClick={toggleMusic}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -125,7 +125,7 @@ const CountdownTimer = ({
                   alt={isPlaying ? "Pause Music" : "Play Music"}
                   className="w-6 h-6"
                 />
-              </motion.button>
+              </motion.button> */}
             </motion.div>
           </>
         )}
