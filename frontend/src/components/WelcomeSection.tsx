@@ -170,7 +170,7 @@ const WelcomeSection = () => {
     repeat: Infinity,
     ease: "easeInOut",
   }}
-  className={`relative bottom-5 mt-4 w-12 h-12 bg-white/80 backdrop-blur-md rounded-full shadow-pink-600 shadow-md flex items-center justify-center transition-transform ring-2 ring-white/60 ${
+  className={`relative bottom-5 mt-4 w-12 h-12 bg-white/80 backdrop-blur-md rounded-full shadow-pink-400 shadow-md flex items-center justify-center transition-transform ring-2 ring-white/60 ${
     !isPlaying ? "animate-glow-soft" : ""
   }`}
 >
