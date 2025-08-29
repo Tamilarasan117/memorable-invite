@@ -7,10 +7,10 @@ const dummyMessages = [
     username: "Raghavan",
     message: "Wishing you both a lifetime of love and happiness ❤️!",
   },
-  {
-    username: "Tamilarasan",
-    message: "Congratulations you both a lifetime of love ❤️ and happiness!",
-  }
+  // {
+  //   username: "Tamilarasan",
+  //   message: "Congratulations you both a lifetime of love ❤️ and happiness!",
+  // },
 ];
 
 const textVariants = {
@@ -57,7 +57,7 @@ const Blessings = () => {
     const interval = setInterval(() => {
       setDirection(1);
       setIndex((prev) => (prev + 1) % messages.length);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [messages]);
 
@@ -173,7 +173,10 @@ const Blessings = () => {
             <h3 className="text-3xl font-bold font-primary text-gray-800">
               {messages[index].username}
             </h3>
-            <p className="text-sm text-gray-600 mt-2 max-w-md">
+            <p
+              className="text-sm text-gray-600 mt-2 max-w-md line-clamp-2"
+              title={messages[index].message}
+            >
               {messages[index].message}
             </p>
           </motion.div>
