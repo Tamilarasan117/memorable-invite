@@ -117,12 +117,12 @@ const Blessings = () => {
       <img
         src="/assets/butterfly.png"
         alt="Butterfly"
-        className="absolute top-[30%] right-[8%] w-10 animate-float2 z-10"
+        className="absolute top-[25%] right-[8%] w-10 animate-float2 z-10"
       />
       <img
         src="/assets/butterfly.png"
         alt="Butterfly"
-        className="absolute bottom-[45%] left-[10%] w-15 animate-float3 z-0"
+        className="absolute bottom-[50%] left-[10%] w-15 animate-float3 z-0"
       />
       <img
         src="/assets/butterfly.png"

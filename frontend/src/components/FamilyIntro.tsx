@@ -37,7 +37,7 @@ const FamilyIntro = () => {
       />
       <img
         src="/assets/butterfly.png"
-        className="absolute top-[15%] right-[15%] w-10 animate-float2 z-10"
+        className="absolute top-[15%] right-[10%] w-10 animate-float2 z-10"
         alt="Butterfly"
       />
       <img
