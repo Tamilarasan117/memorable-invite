@@ -7,6 +7,10 @@ const dummyMessages = [
     username: "Raghavan",
     message: "Wishing you both a lifetime of love and happiness ❤️!",
   },
+  {
+    username: "Tamilarasan",
+    message: "Congratulations you both a lifetime of love ❤️ and happiness!",
+  }
 ];
 
 const textVariants = {
