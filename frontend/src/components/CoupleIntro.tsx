@@ -159,7 +159,7 @@ const CoupleIntro = () => {
           <CoupleInfo
             name="L. Nithya"
             designation="BCA"
-            parents="S/o. Mr. D. Lakshmipathi & Museaswari."
+            parents="S/o. Mr. D. Lakshmipathi & Muneaswari."
             address="Tirupattur Dist, Nattrampalli Taluk, Bandarappalli next Nallakintanapalli Village"
             index={2}
             align="left"
