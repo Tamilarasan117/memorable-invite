@@ -165,6 +165,7 @@ const WelcomeSection = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         animate={!isPlaying ? { scale: [1, 1.15, 1] } : {}}
+        variants={textVariants}
         transition={{
           duration: 1.5,
           repeat: Infinity,
