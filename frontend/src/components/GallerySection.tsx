@@ -6,7 +6,7 @@ const photoList1 = [
   "/assets/couple/couple1.jpg",
   "/assets/couple/bride1.jpg",
   "/assets/family/family5.jpg",
-  "/assets/family/family7.jpg",
+  "/assets/family/family13.jpg",
   "/assets/couple/couple2.jpg",
   "/assets/couple/groom1.jpg",
 ];
@@ -19,7 +19,7 @@ const photoList2 = [
   "/assets/family/family9.jpg",
   "/assets/family/family11.jpg",
   "/assets/couple/couple4.jpg",
-  "/assets/couple/groom2.jpg",
+  "/assets/couple/groom4.jpg",
 ];
 
 const photoList3 = [

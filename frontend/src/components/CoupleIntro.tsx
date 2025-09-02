@@ -134,7 +134,7 @@ const CoupleIntro = () => {
         className="absolute bottom-[10%] right-[10%] w-2 animate-float3 z-10"
       />
 
-      <div className="relative w-full max-w-[600px] h-[325px] mx-auto mb-12">
+      <div className="relative w-full max-w-[600px] h-[320px] mx-auto mb-12">
         <div className="absolute top-0 left-0">
           <CoupleCard
             backgroundPosition="left"
