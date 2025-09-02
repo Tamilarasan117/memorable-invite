@@ -13,22 +13,22 @@ const MapSection = () => {
   return (
     <section className="relative bg-white backdrop-blur-lg py-16 px-4 overflow-hidden">
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute top-[8%] left-[10%] w-4 animate-float1 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         alt="Butterfly"
         className="absolute top-[20%] right-[5%] w-8 animate-float2 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         alt="Butterfly"
         className="absolute bottom-[10%] left-[15%] w-10 animate-float3 z-10"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute bottom-[5%] right-[12%] w-5 animate-float4 z-10"
       />
@@ -64,7 +64,7 @@ const MapSection = () => {
           >
             <span>View on Google Maps</span>
             <img
-              src="/assets/map.png"
+              src="/assets/images/map.png"
               alt="Map"
               className="w-6 h-6 object-contain rounded"
             />
@@ -85,7 +85,7 @@ const MapSection = () => {
           >
             <span>View on Google Maps</span>
             <img
-              src="/assets/map.png"
+              src="/assets/images/map.png"
               alt="Map"
               className="w-6 h-6 object-contain rounded"
             />

@@ -34,15 +34,15 @@ const timelineEvents = [
 const getEventIcon = (title: string) => {
   switch (title.toLowerCase()) {
     case "wedding":
-      return "/assets/ring.png";
+      return "/assets/images/ring.png";
     case "dinner":
-      return "/assets/dinner.jpg";
+      return "/assets/images/dinner.jpg";
     case "reception":
-      return "/assets/reception.png";
+      return "/assets/images/reception.png";
     case "party":
-      return "/assets/party.png";
+      return "/assets/images/party.png";
     default:
-      return "/assets/Heart.png";
+      return "/assets/images/Heart.png";
   }
 };
 
@@ -50,32 +50,32 @@ const EventDetails = () => {
   return (
     <section className="relative py-10 px-4 bg-white overflow-hidden">
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute top-[10%] left-[5%] w-2 animate-float1 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         className="absolute top-[15%] right-[15%] w-10 animate-float2 z-10"
         alt="Butterfly"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute top-[30%] right-[8%] w-1 animate-float2 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         className="absolute bottom-[5%] left-[10%] w-10 animate-float3 z-10"
         alt="Butterfly"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute bottom-[45%] left-[10%] w-1.5 animate-float3 z-10"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute bottom-[28%] right-[15%] w-2 animate-float4 z-10"
       />
@@ -115,7 +115,7 @@ const EventDetails = () => {
                 }`}
               >
                 <img
-                  src="/assets/Heart.png"
+                  src="/assets/images/Heart.png"
                   alt="Heart"
                   className={`absolute top-1/2 -translate-y-1/2 ${
                     isLeft ? "-right-[34px]" : "-left-[34px]"

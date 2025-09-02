@@ -1,18 +1,36 @@
 import { motion } from "framer-motion";
 
-const photoList = [
-  "/assets/images/couple1.jpg",
-  "/assets/images/bride1.jpg",
-  "/assets/images/family1.jpg",
-  "/assets/images/bride5.jpg",
-  "/assets/images/family2.jpg",
-  "/assets/images/bride1.jpg",
-  "/assets/images/groom1.jpg",
-  "/assets/images/family6.jpg",
-  "/assets/images/family3.jpg",
-  "/assets/images/bride3.jpg",
-  "/assets/images/family4.jpg",
-  "/assets/images/bride6.jpg",
+const photoList1 = [
+  "/assets/family/family1.jpg",
+  "/assets/family/family3.jpg",
+  "/assets/couple/couple1.jpg",
+  "/assets/couple/bride1.jpg",
+  "/assets/family/family5.jpg",
+  "/assets/family/family7.jpg",
+  "/assets/couple/couple2.jpg",
+  "/assets/couple/groom1.jpg",
+];
+
+const photoList2 = [
+  "/assets/family/family13.jpg",
+  "/assets/family/family2.jpg",
+  "/assets/couple/couple3.jpg",
+  "/assets/couple/bride3.jpg",
+  "/assets/family/family9.jpg",
+  "/assets/family/family11.jpg",
+  "/assets/couple/couple4.jpg",
+  "/assets/couple/groom2.jpg",
+];
+
+const photoList3 = [
+  "/assets/family/family4.jpg",
+  "/assets/family/family6.jpg",
+  "/assets/couple/couple5.jpg",
+  "/assets/couple/bride4.jpg",
+  "/assets/family/family8.jpg",
+  "/assets/family/family10.jpg",
+  "/assets/couple/couple6.jpg",
+  "/assets/couple/groom3.jpg",
 ];
 
 const textVariants = {
@@ -53,39 +71,39 @@ const GallerySection = () => {
       </motion.div>
 
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute top-[5%] left-[8%] w-4 animate-float1 z-10"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute bottom-[10%] right-[5%] w-6 animate-float2 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         alt="Butterfly"
         className="absolute top-[10%] left-[15%] w-7 animate-float3 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         alt="Butterfly"
         className="absolute top-[30%] right-[10%] w-10 animate-float4 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         alt="Butterfly"
         className="absolute bottom-[5%] left-[10%] w-14 animate-float3 z-10"
       />
 
-      <div className="relative max-w-5xl mx-auto overflow-hidden h-[640px] z-20">
+      <div className="relative max-w-5xl mx-auto overflow-hidden h-[650px] z-20">
         <div className="flex gap-4">
           <motion.div
             className="flex flex-col gap-3 w-1/3"
             animate={{ y: ["0%", "-50%"] }}
             transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
           >
-            {[...photoList, ...photoList].map((src, i) => (
+            {[...photoList1, ...photoList1].map((src, i) => (
               <img
                 key={`col1-${i}`}
                 src={src}
@@ -100,7 +118,7 @@ const GallerySection = () => {
             animate={{ y: ["-50%", "0%"] }}
             transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
           >
-            {[...photoList, ...photoList].map((src, i) => (
+            {[...photoList2, ...photoList2].map((src, i) => (
               <img
                 key={`col2-${i}`}
                 src={src}
@@ -115,7 +133,7 @@ const GallerySection = () => {
             animate={{ y: ["0%", "-50%"] }}
             transition={{ duration: 31, repeat: Infinity, ease: "linear" }}
           >
-            {[...photoList, ...photoList].map((src, i) => (
+            {[...photoList3, ...photoList3].map((src, i) => (
               <img
                 key={`col3-${i}`}
                 src={src}

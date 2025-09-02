@@ -94,49 +94,53 @@ const CoupleIntro = () => {
       </motion.h2>
 
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Butterfly"
         className="absolute top-[10%] left-[15%] w-3 animate-float1 z-10"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Butterfly"
         className="absolute top-[30%] right-[8%] w-4 animate-float2 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         className="absolute top-[15%] right-[15%] w-10 animate-float2 z-10"
         alt="Butterfly"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         className="absolute bottom-[45%] left-[10%] w-15 animate-float3 z-10"
         alt="Butterfly"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Butterfly"
         className="absolute bottom-[35%] left-[10%] w-2 animate-float3 z-10"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Butterfly"
         className="absolute bottom-[45%] right-[15%] w-3 animate-float4 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         className="absolute bottom-[15%] left-[25%] w-10 animate-float3 z-10"
         alt="Butterfly"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Butterfly"
         className="absolute bottom-[10%] right-[10%] w-2 animate-float3 z-10"
       />
 
       <div className="relative w-full max-w-[600px] h-[325px] mx-auto mb-12">
         <div className="absolute top-0 left-0">
-          <CoupleCard backgroundPosition="left" from="left" image="url('/assets/images/groom3.png')" />
+          <CoupleCard
+            backgroundPosition="left"
+            from="left"
+            image="url('/assets/couple/groom2.jpg')"
+          />
         </div>
         <div className="absolute bottom-0 right-5">
           <CoupleInfo
@@ -153,7 +157,11 @@ const CoupleIntro = () => {
 
       <div className="relative w-full max-w-[600px] h-[320px] mx-auto">
         <div className="absolute top-0 right-0">
-          <CoupleCard backgroundPosition="right" from="right" image="url('/assets/images/bride8.png')" />
+          <CoupleCard
+            backgroundPosition="right"
+            from="right"
+            image="url('/assets/couple/bride8.png')"
+          />
         </div>
         <div className="absolute bottom-0 left-5">
           <CoupleInfo

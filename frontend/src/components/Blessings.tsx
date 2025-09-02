@@ -100,32 +100,32 @@ const Blessings = () => {
   return (
     <section className="bg-white py-16 px-4 text-center relative overflow-hidden">
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute top-[10%] left-[8%] w-3 animate-float1 z-10"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute bottom-[12%] right-[6%] w-4 animate-float2 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         alt="Butterfly"
         className="absolute top-[10%] left-[15%] w-7 animate-float1 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         alt="Butterfly"
         className="absolute top-[25%] right-[8%] w-10 animate-float2 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         alt="Butterfly"
         className="absolute bottom-[50%] left-[10%] w-15 animate-float3 z-0"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         alt="Butterfly"
         className="absolute bottom-[5%] right-[15%] w-20 animate-float4 z-10"
       />

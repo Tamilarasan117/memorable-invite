@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 
 const images = [
-  "/assets/images/bride6.jpg",
-  "/assets/images/groom1.jpg",
-  "/assets/images/bride3.jpg",
+  "/assets/couple/bride6.jpg",
+  "/assets/couple/groom1.jpg",
+  "/assets/couple/bride3.jpg",
 ];
 
 const ImageCarousel = () => {
@@ -29,17 +29,17 @@ const ImageCarousel = () => {
   return (
     <section ref={ref} className="bg-white py-12 overflow-hidden relative">
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         className="absolute top-[16%] left-[6%] w-10 animate-float1 z-10"
         alt="Butterfly"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         className="absolute bottom-[12%] right-[8%] w-2 animate-float2 z-10"
         alt="Butterfly"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Butterfly"
         className="absolute bottom-[10%] right-[10%] w-2 animate-float3 z-10"
       />

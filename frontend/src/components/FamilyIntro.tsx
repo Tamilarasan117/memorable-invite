@@ -10,43 +10,44 @@ const textVariants = {
 };
 
 const photoList = [
-  "/assets/images/group1.jpg",
-  "/assets/images/bride6.jpg",
-  "/assets/images/groom1.jpg",
-  "/assets/images/group2.jpg",
-  "/assets/images/bride3.jpg",
+  "/assets/group/group1.jpg",
+  "/assets/couple/bride6.jpg",
+  "/assets/group/group2.jpg",
+  "/assets/couple/groom1.jpg",
+  "/assets/group/group3.jpg",
+  "/assets/couple/bride3.jpg",
 ];
 
 const FamilyIntro = () => {
   return (
     <section className="bg-white py-16 px-6 overflow-hidden text-center relative">
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute top-[10%] left-[5%] w-2 animate-float1 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         alt="Heart"
         className="absolute bottom-[58%] right-[45%] w-10 animate-float4 z-10"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute top-[23%] right-[8%] w-2 animate-float2 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         className="absolute top-[15%] right-[10%] w-10 animate-float2 z-10"
         alt="Butterfly"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute bottom-[65%] left-[10%] w-2 animate-float3 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         alt="Heart"
         className="absolute bottom-[1%] right-[15%] w-10 animate-float4 z-10"
       />
@@ -85,7 +86,7 @@ const FamilyIntro = () => {
           viewport={{ once: true }}
         >
           <img
-            src="/assets/images/groom1.jpg"
+            src="/assets/couple/groom1.jpg"
             alt="Groom"
             className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-lg mb-4"
           />
@@ -127,7 +128,7 @@ const FamilyIntro = () => {
           viewport={{ once: true }}
         >
           <img
-            src="/assets/images/bride3.jpg"
+            src="/assets/couple/bride3.jpg"
             alt="Bride"
             className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-lg mb-4"
           />

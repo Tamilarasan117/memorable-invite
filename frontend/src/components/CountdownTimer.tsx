@@ -26,9 +26,9 @@ type CountdownTimerProps = {
 
 const CountdownTimer = ({
   startDelay = 2,
-  // isPlaying,
-  // toggleMusic,
-}: CountdownTimerProps) => {
+}: // isPlaying,
+// toggleMusic,
+CountdownTimerProps) => {
   const targetDate = new Date("2025-09-04T06:00:00");
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
   const [startAnimation, setStartAnimation] = useState(false);
@@ -62,12 +62,12 @@ const CountdownTimer = ({
       className="relative bg-white/40 backdrop-blur-md py-6 px-0 rounded-xl max-w-md mx-auto"
     >
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute top-[10%] left-[15%] w-3 animate-float1 z-10"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute top-[30%] right-[8%] w-4 animate-float2 z-10"
       />
@@ -85,10 +85,16 @@ const CountdownTimer = ({
             transition={{ duration: 1 }}
             className="px-2"
           >
-            <motion.p className="text-xl sm:text-2xl font-bold font-primary text-pink-700 mb-2" variants={itemVariants}>
+            <motion.p
+              className="text-xl sm:text-2xl font-bold font-primary text-pink-700 mb-2"
+              variants={itemVariants}
+            >
               💖 Forever Begins Today 💍
             </motion.p>
-            <motion.p className="text-sm text-gray-600 font-secondary" variants={itemVariants}>
+            <motion.p
+              className="text-sm text-gray-600 font-secondary"
+              variants={itemVariants}
+            >
               Our journey as one begins now. Thank you for being part of our
               story.
             </motion.p>
@@ -121,7 +127,7 @@ const CountdownTimer = ({
                 }`}
               >
                 <img
-                  src={isPlaying ? "/assets/Pause.png" : "/assets/Play.png"}
+                  src={isPlaying ? "/assets/images/Pause.png" : "/assets/images/Play.png"}
                   alt={isPlaying ? "Pause Music" : "Play Music"}
                   className="w-6 h-6"
                 />

@@ -17,27 +17,27 @@ const QRCodeSection: React.FC = () => {
   return (
     <section className="relative bg-white py-16 px-6 overflow-hidden text-center">
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute top-[10%] left-[5%] w-2 animate-float1 z-10"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute top-[23%] right-[8%] w-2 animate-float2 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         className="absolute top-[15%] right-[15%] w-10 animate-float2 z-10"
         alt="Butterfly"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         alt="Heart"
         className="absolute bottom-[65%] left-[10%] w-2 animate-float3 z-10"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         alt="Butterfly"
         className="absolute bottom-[1%] right-[15%] w-10 animate-float4 z-10"
       />
@@ -60,7 +60,7 @@ const QRCodeSection: React.FC = () => {
         <motion.div variants={textVariants} custom={1} className="relative">
           <QRCode value={weddingLink} size={200} />
           <img
-            src="/assets/Logo.png"
+            src="/assets/images/Logo.png"
             alt="Memorable Invite Logo"
             className="absolute inset-0 m-auto w-13 h-7 bg-white p-1"
           />

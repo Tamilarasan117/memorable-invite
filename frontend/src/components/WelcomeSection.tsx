@@ -37,45 +37,45 @@ const WelcomeSection = () => {
     <section
       className="relative min-h-[100vh] flex flex-col justify-center items-center text-center"
       style={{
-        backgroundImage: "url('/assets/Welcome_bg1.png')",
+        backgroundImage: "url('/assets/images/Welcome_bg1.png')",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundPosition: "top",
       }}
     >
       <img
-        src="/assets/Top_design.png"
+        src="/assets/images/Top_design.png"
         alt="Top Flower Design"
         className="absolute top-0 left-1/2 -translate-x-1/2 w-full z-1 pointer-events-none"
       />
 
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         className="absolute top-[10%] left-[5%] w-7 animate-float1 z-10"
         alt="Butterfly"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         className="absolute top-[30%] right-[8%] w-10 animate-float2 z-10"
         alt="Butterfly"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         className="absolute bottom-[45%] left-[10%] w-15 animate-float3 z-10"
         alt="Butterfly"
       />
       <img
-        src="/assets/butterfly.png"
+        src="/assets/images/butterfly.png"
         className="absolute bottom-[25%] right-[15%] w-20 animate-float4 z-10"
         alt="Butterfly"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         className="absolute top-[20%] left-[15%] w-3 animate-float4 z-10"
         alt="heart"
       />
       <img
-        src="/assets/Heart.png"
+        src="/assets/images/Heart.png"
         className="absolute top-[40%] right-[15%] w-3 animate-float4 z-10"
         alt="heart"
       />
@@ -85,7 +85,7 @@ const WelcomeSection = () => {
       <div className="relative z-10 w-full max-w-[320px] mx-auto py-10">
         <div className="relative w-[330px] h-[330px] mx-auto">
           <motion.img
-            src="/assets/Welcome_animation_img.png"
+            src="/assets/images/Welcome_animation_img.png"
             alt="Floral Ring"
             className="w-full h-full mx-auto object-contain"
             animate={{ rotate: 360 }}
@@ -104,7 +104,7 @@ const WelcomeSection = () => {
             </motion.h1>
 
             <motion.img
-              src="/assets/ring.png"
+              src="/assets/images/ring.png"
               alt="Ring Icon"
               className="w-8 my-2"
               variants={textVariants}
@@ -160,29 +160,34 @@ const WelcomeSection = () => {
 
       <MusicPlayer audioRef={audioRef} isPlaying={isPlaying} />
 
-<motion.button
-  onClick={toggleMusic}
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
-  animate={!isPlaying ? { scale: [1, 1.15, 1] } : {}}
-  transition={{
-    duration: 1.5,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
-  className={`relative bottom-5 mt-4 w-12 h-12 bg-white/80 backdrop-blur-md rounded-full shadow-pink-400 shadow-md flex items-center justify-center transition-transform ring-2 ring-white/60 ${
-    !isPlaying ? "animate-glow-soft" : ""
-  }`}
->
-  <img
-    src={isPlaying ? "/assets/Pause.png" : "/assets/Play.png"}
-    alt={isPlaying ? "Pause Music" : "Play Music"}
-    className="w-6 h-6"
-  />
-</motion.button>
+      <motion.button
+        onClick={toggleMusic}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        animate={!isPlaying ? { scale: [1, 1.15, 1] } : {}}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className={`relative bottom-5 mt-4 w-12 h-12 bg-white/80 backdrop-blur-md rounded-full shadow-pink-400 shadow-md flex items-center justify-center transition-transform ring-2 ring-white/60 ${
+          !isPlaying ? "animate-glow-soft" : ""
+        }`}
+      >
+        <img
+          src={
+            isPlaying ? "/assets/images/Pause.png" : "/assets/images/Play.png"
+          }
+          alt={isPlaying ? "Pause Music" : "Play Music"}
+          className="w-6 h-6"
+        />
+      </motion.button>
 
-
-<CountdownTimer startDelay={2} isPlaying={isPlaying} toggleMusic={toggleMusic} />
+      <CountdownTimer
+        startDelay={2}
+        isPlaying={isPlaying}
+        toggleMusic={toggleMusic}
+      />
     </section>
   );
 };
