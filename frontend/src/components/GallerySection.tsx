@@ -17,7 +17,7 @@ const photoList2 = [
   "/assets/couple/couple3.jpg",
   "/assets/couple/bride3.jpg",
   "/assets/family/family9.jpg",
-  "/assets/family/family11.jpg",
+  "/assets/family/family14.jpg",
   "/assets/couple/couple4.jpg",
   "/assets/couple/groom4.jpg",
 ];
@@ -96,7 +96,7 @@ const GallerySection = () => {
         className="absolute bottom-[5%] left-[10%] w-14 animate-float3 z-10"
       />
 
-      <div className="relative max-w-5xl mx-auto overflow-hidden h-[650px] z-20">
+      <div className="relative max-w-5xl mx-auto overflow-hidden h-[675px] z-20">
         <div className="flex gap-4">
           <motion.div
             className="flex flex-col gap-3 w-1/3"
