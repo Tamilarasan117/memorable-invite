@@ -15,6 +15,7 @@ const photoList1 = [
   "/assets/family/family1.jpg",
   "/assets/couple/bride5.jpg",
   "/assets/couple/groom1.jpg",
+  "/assets/family/family18.jpg",
 ];
 
 const photoList2 = [

@@ -11,6 +11,7 @@ const photoList1 = [
   "/assets/couple/bride6.jpg",
   "/assets/family/family13.jpg",
   "/assets/couple/bride7.jpg",
+  "/assets/family/family19.jpg",
 ];
 
 const photoList2 = [
@@ -20,9 +21,12 @@ const photoList2 = [
   "/assets/couple/couple3.jpg",
   "/assets/family/family8.jpg",
   "/assets/couple/groom3.jpg",
+  "/assets/family/family20.jpg",
   "/assets/family/family11.jpg",
   "/assets/couple/groom7.jpg",
   "/assets/family/family12.jpg",
+  "/assets/family/family14.jpg",
+  "/assets/family/family16.jpg",
 ];
 
 const photoList3 = [
@@ -34,7 +38,8 @@ const photoList3 = [
   "/assets/couple/groom4.jpg",
   "/assets/family/family12.jpg",
   "/assets/couple/bride11.jpg",
-  "/assets/family/family14.jpg",
+  "/assets/family/family15.jpg",
+  "/assets/family/family17.jpg",
 ];
 
 const textVariants = {
