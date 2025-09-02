@@ -9,14 +9,20 @@ const textVariants = {
   }),
 };
 
-const photoList = [
+const photoList1 = [
   "/assets/family/family11.jpg",
   "/assets/group/group1.jpg",
-  "/assets/couple/bride6.jpg",
-  "/assets/group/group2.jpg",
+  "/assets/family/family1.jpg",
+  "/assets/couple/bride5.jpg",
   "/assets/couple/groom1.jpg",
-  "/assets/group/group3.jpg",
+];
+
+const photoList2 = [
+  "/assets/group/group2.jpg",
   "/assets/couple/bride3.jpg",
+  "/assets/group/group3.jpg",
+  "/assets/family/family11.jpg",
+  "/assets/family/family15.jpg",
 ];
 
 const FamilyIntro = () => {
@@ -87,7 +93,7 @@ const FamilyIntro = () => {
           viewport={{ once: true }}
         >
           <img
-            src="/assets/couple/groom1.jpg"
+            src="/assets/couple/groom7.jpg"
             alt="Groom"
             className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-lg mb-4"
           />
@@ -129,7 +135,7 @@ const FamilyIntro = () => {
           viewport={{ once: true }}
         >
           <img
-            src="/assets/couple/bride3.jpg"
+            src="/assets/couple/bride5.jpg"
             alt="Bride"
             className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-lg mb-4"
           />
@@ -185,7 +191,7 @@ const FamilyIntro = () => {
             animate={{ x: ["-50%", "0%"] }}
             transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
           >
-            {[...photoList, ...photoList].map((src, i) => (
+            {[...photoList1, ...photoList1].map((src, i) => (
               <img
                 key={`row1-${i}`}
                 src={src}
@@ -202,7 +208,7 @@ const FamilyIntro = () => {
             animate={{ x: ["0%", "-50%"] }}
             transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
           >
-            {[...photoList, ...photoList].map((src, i) => (
+            {[...photoList2, ...photoList2].map((src, i) => (
               <img
                 key={`row2-${i}`}
                 src={src}

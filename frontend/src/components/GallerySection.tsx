@@ -2,35 +2,39 @@ import { motion } from "framer-motion";
 
 const photoList1 = [
   "/assets/family/family1.jpg",
-  "/assets/family/family3.jpg",
-  "/assets/couple/couple1.jpg",
   "/assets/couple/bride1.jpg",
-  "/assets/family/family5.jpg",
-  "/assets/family/family13.jpg",
+  "/assets/family/family4.jpg",
   "/assets/couple/couple2.jpg",
+  "/assets/family/family7.jpg",
   "/assets/couple/groom1.jpg",
+  "/assets/family/family10.jpg",
+  "/assets/couple/bride6.jpg",
+  "/assets/family/family13.jpg",
+  "/assets/couple/bride7.jpg",
 ];
 
 const photoList2 = [
-  "/assets/family/family13.jpg",
   "/assets/family/family2.jpg",
+  "/assets/couple/bride2.jpg",
+  "/assets/family/family5.jpg",
   "/assets/couple/couple3.jpg",
-  "/assets/couple/bride3.jpg",
-  "/assets/family/family9.jpg",
-  "/assets/family/family14.jpg",
-  "/assets/couple/couple4.jpg",
-  "/assets/couple/groom4.jpg",
+  "/assets/family/family8.jpg",
+  "/assets/couple/groom3.jpg",
+  "/assets/family/family11.jpg",
+  "/assets/couple/groom7.jpg",
+  "/assets/family/family12.jpg",
 ];
 
 const photoList3 = [
-  "/assets/family/family4.jpg",
+  "/assets/family/family3.jpg",
+  "/assets/couple/bride3.jpg",
   "/assets/family/family6.jpg",
-  "/assets/couple/couple5.jpg",
-  "/assets/couple/bride7.jpg",
-  "/assets/family/family8.jpg",
-  "/assets/family/family10.jpg",
-  "/assets/couple/couple6.jpg",
-  "/assets/couple/groom3.jpg",
+  "/assets/couple/couple4.jpg",
+  "/assets/family/family9.jpg",
+  "/assets/couple/groom4.jpg",
+  "/assets/family/family12.jpg",
+  "/assets/couple/bride11.jpg",
+  "/assets/family/family14.jpg",
 ];
 
 const textVariants = {

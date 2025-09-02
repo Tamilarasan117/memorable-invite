@@ -2,9 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 
 const images = [
-  "/assets/couple/bride6.jpg",
-  "/assets/couple/groom1.jpg",
   "/assets/couple/bride3.jpg",
+  "/assets/couple/groom1.jpg",
+  "/assets/couple/couple7.jpg",
+  "/assets/couple/bride11.jpg",
 ];
 
 const ImageCarousel = () => {
