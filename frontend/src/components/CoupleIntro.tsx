@@ -139,7 +139,7 @@ const CoupleIntro = () => {
           <CoupleCard
             backgroundPosition="left"
             from="left"
-            image="url('/assets/couple/groom2.jpg')"
+            image="url('/assets/couple/groom7.jpg')"
           />
         </div>
         <div className="absolute bottom-0 right-5">
