@@ -10,6 +10,7 @@ const textVariants = {
 };
 
 const photoList = [
+  "/assets/family/family11.jpg",
   "/assets/group/group1.jpg",
   "/assets/couple/bride6.jpg",
   "/assets/group/group2.jpg",

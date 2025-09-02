@@ -26,7 +26,7 @@ const photoList3 = [
   "/assets/family/family4.jpg",
   "/assets/family/family6.jpg",
   "/assets/couple/couple5.jpg",
-  "/assets/couple/bride4.jpg",
+  "/assets/couple/bride7.jpg",
   "/assets/family/family8.jpg",
   "/assets/family/family10.jpg",
   "/assets/couple/couple6.jpg",
